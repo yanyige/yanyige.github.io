@@ -1,0 +1,76 @@
+$digitBgColor: rgb(230,230,230);
+$digitHoverBgColor: rgb(207,207,207);
+$showBgColor: rgb(242,242,242);
+$bWidth: 50px;
+$bHeight: 40px;
+%fl{float:left}
+$calWidth: 250px;
+@mixin myFont{
+	font-family: 'Microsoft YaHei',Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	line-height: 40px;
+}
+%mg0{margin: 0 auto}
+%tac{text-align: center}
+%db{display: block}
+%dn{display: none}
+%pr{position: relative}
+%pa{position: absolute}
+
+
+.clearfix{
+&:before,
+&:after {
+    content:"";
+    display: table;
+  }
+&:after {
+    clear:both;
+    overflow: hidden;
+  }
+}
+
+.calc {
+	width: $calWidth;
+	.panel{
+
+		& .digit{
+			width: $bWidth;
+			height: $bHeight;
+			background-color: $digitBgColor;
+			@extend %fl;
+			color: black;
+			@include myFont;
+			@extend %mg0;
+			@extend %tac;
+			&:hover{
+				background-color: $digitHoverBgColor;
+			}
+		}
+	}
+}
+
+.show{
+	background-color: $showBgColor;
+	height: 80px;
+	input{
+		@extend %dn;
+	}
+	#inputBlock{
+		@extend %pr;
+		height: 50px;
+		#stack1{
+			@extend %pa;
+			bottom: 0px;
+		}
+	}
+	#OutputBlock{
+		@extend %pr;
+		height: 30px;
+		#stack2{
+			@extend %pa;
+			bottom: 0px;
+		}
+	}
+}
+

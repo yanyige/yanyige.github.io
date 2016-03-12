@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/generation.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/font-awesome-4.5.0/css/font-awesome.min.css">
+</head>
+
+    
+    <input type="button" value="generation" onclick="showFormula()">
+    <input type="text" id="answer">
+    <input type="button" value="提交答案" onclick="checkAns()">
+    <p>答案保留2位小数</p>
+
+	<!-- 整个计算器窗体 -->
+	<div class="calc">
+		<!-- 显示界面 -->
+		<div class="show">
+			<input type="text" id="formula">
+			<div id="OutputBlock"><span id="stack2"></span></div>
+			<div id="inputBlock"><span id="stack1"></span></div>
+		</div>  
+		<!-- 控制面板 -->
+		<div class="panel clearfix">
+
+			<div class="digit" onclick='clickPanel()'><i class="fa fa-arrow-up"></i></div>
+			<div class="digit" onclick='allClear()'>CE</div>
+			<div class="digit" onclick='allClear()'>C</div>
+			<div class="digit" onclick='newFormula()'>new!</div>
+			<div class="digit" onclick="clickPanel('/')"><i class="fa fa-percent"></i></div>
+			<div class="digit">PI</div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>7</div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>8</div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>9</div>
+			<div class="digit" onclick="clickPanel('*')"><i class="fa fa-remove"></i></div>
+			<div class="digit">n!</div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>4</div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>5</div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>6</div>
+			<div class="digit" onclick="clickPanel('-')"><i class="fa fa-minus"></i></div>
+			<div class="digit"></div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>1</div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>2</div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>3</div>
+			<div class="digit" onclick="clickPanel('+')"><i class="fa fa-plus"></i></div>
+			<div class="digit">(</div>
+			<div class="digit">)</div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>0</div>
+			<div class="digit">.</div>
+			<div class="digit" onclick="clickPanel('=')">=</div>
+
+		</div>
+	</div>
+
+</body>
+</html>

@@ -351,6 +351,7 @@ function allClear(){
     clearStack(formula);
     stack1.push("0");
     showStack(stack1 , "stack1");
+    showStack(stack2 , "stack2");
 }
 
 function newFormula(){

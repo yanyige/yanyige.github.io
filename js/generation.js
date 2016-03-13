@@ -147,14 +147,24 @@ function clickPanel(target){
     else{hasDot = 0;}
 
     if(target == "."){
-        if(stack1.length && !hasDot){
+        if(flag == 3){
+            clearStack(stack1);
+            clearStack(formula);
+            stack1.push(0);
             stack1.push(target);
             showStack(stack1 , "stack1");
             flag = 1;
             hasDot = 1;
-        }
-        else{
+        }else{
+            if(stack1.length && !hasDot){
+                stack1.push(target);
+                showStack(stack1 , "stack1");
+                flag = 1;
+                hasDot = 1;
+            }
+            else{
 
+            }
         }
     }else{
 

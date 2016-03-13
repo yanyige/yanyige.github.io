@@ -15,7 +15,18 @@ var stack2 = [];
 var flag = 1; /*记录最近一次输入的类型
                 1.代表数字
                 2.代表符号
+                3.代表等号
+                4.代表刚按过c
                 */
+
+var ansFlag = 0;
+var hasDot = 0;
+
+
+// 记录此时用户的模式
+var mode = 1;
+
+
 var formula = [];
 
 function getFormula(){
@@ -74,80 +85,23 @@ function getFormula(){
 
 }
 
-function showFormula() { //显示公式并且计算答案
-    var str = getFormula();
-    var strFormula = str.join("");
-    var text = document.getElementById("formula");
-    text.value = strFormula;
-
-    var S1 = [] // 保存运算符的栈
-    var S2 = [] // 保存中间结果的栈
-
-    console.log(str);
-    for (var i = 0; i < str.length; i++) {
-        console.log("******************");
-        console.log("S1="+S1);
-        console.log("S2="+S2);
-        console.log("str[i]="+ str[i])
-        if (!isNaN(str[i])){
-            S2.push(str[i]);
-        }else if(isOperate(str[i])){
-            console.log("操作数是" + str[i]);
-            if(!S1.length){
-                S1.push(str[i]);
-            } else{
-                console.log("SSSSS1="+S1);
-                var s1Top = S1.pop();
-                S1.push(s1Top);
-                console.log("S1栈顶是"+s1Top);
-                if(s1Top == '('){
-                    S1.push(str[i]);
-                }
-                else{
-                    var prior1 = getPriorty(s1Top);
-                    var prior2 = getPriorty(str[i]);
-                    if(prior1 < prior2){
-                        S1.push(str[i]);
-                    }else{
-                        console.log("i-1");
-                        var tempOp = S1.pop();
-                        console.log("tempOp="+tempOp);
-                        S2.push(tempOp);
-                        i --;
-                    }
-                }
-            }
-        }else if(str[i] == '('){
-            S1.push(str[i]);
-        }else if(str[i] == ')'){
-            var tempOp = S1.pop();
-            while(tempOp != '('){
-                S2.push(tempOp);
-                tempOp = S1.pop();
-            }
-        }
-
+function negtiveStack1() { //Stack1取反
+    var tStack = [];
+    while(stack1.length){
+        tStack.push(stack1.pop());
     }
-    console.log("S1结束时="+S1);
-    while(S1.length){
-        var tempOp = S1.pop();
-        S2.push(tempOp);
+    Stack1.push("-");
+    while(tStack.length){
+        stack1.push(tStack.pop());
     }
-    console.log(S2);
-
-    ANS = getAns(S2);
+    showStack(stack1 , "stack1");
 }
 
-function checkAns(){
-    ANS = ANS.toFixed(2);
-    ANS = Number(ANS);
-    console.log("答案="+ANS);
-    var myAns = document.getElementById("answer").value;
-    console.log(myAns);
-    if(myAns == ANS){
+function checkAns(ans1, ans2){
+    if(ans1 == ans2){
         alert("回答正确!");
     }else{
-        alert("回答错误! 正确答案是"+ANS+",请仔细检查一下哟~");
+        alert("回答错误! 正确答案是"+ans1+",请仔细检查一下哟~");
     }
 }
 
@@ -189,91 +143,158 @@ function getPriorty(op){
 
 // 点击面板之后的操作
 function clickPanel(target){
-    console.log(formula);
-    if(!isNaN(target)){ //如果是数字
-        if(flag==1){
-            stack1.push(target);
-            showStack(stack1 , "stack1");
-            flag = 1;
-        }else{
-            clearStack(stack1);
-            stack1.push(target);
-            showStack(stack1 , "stack1");
-            flag = 1;
-        }
-        
-    }else if(target=='='){
-        if(flag!=3){
-            if(stack1.length!=0){
-                formula.push(Number(stack1.join("")));
-                var ans = calc(formula);
-                stack1 = ans.toString().split("");
-                showStack(stack1 , "stack1");
-                flag = 3;
-                clearStack(stack2);
-                showStack(stack2 , "stack2");
-            }else{
-                var ans = calc(formula);
-                stack1 = ans.toString().split("");
-                showStack(stack1 , "stack1");
-                flag = 3;
-                clearStack(stack2);
-                showStack(stack2 , "stack2");
-            }
-        }else{
-            
-            var t1 = formula.pop();
-            var t2 = formula.pop();
-            formula.push(t2);
-            formula.push(t1);
-            formula.push(t2);
-            formula.push(t1);
+    if(checkDot(stack1)){hasDot = 1;}
+    else{hasDot = 0;}
 
-            var ans = calc(formula);
-            stack1 = ans.toString().split("");
+    if(target == "."){
+        if(stack1.length && !hasDot){
+            stack1.push(target);
             showStack(stack1 , "stack1");
-            clearStack(stack2);
-            showStack(stack2 , "stack2");
-        }
-    }else{
-        if(flag == 1){
-            if(stack1.length!=0){
-                formula.push(Number(stack1.join("")));
-                var s1 = calc(formula);
-                formula.push(target);
-                stack2 = formula.slice();
-                stack1 = s1.toString().split("");
-                showStack(stack1 , "stack1");
-                showStack(stack2 , "stack2");
-                flag = 2;
-            }else{
-                var s1 = calc(formula);
-                formula.push(target);
-                stack2 = formula.slice();
-                stack1 = s1.toString().split("");
-                showStack(stack1 , "stack1");
-                showStack(stack2 , "stack2");
-                flag = 2;
-            }
-        }
-        else if(flag == 3){
-            clearStack(formula);
-            formula.push(Number(stack1.join("")));
-            var s1 = calc(formula);
-            formula.push(target);
-            stack2 = formula.slice();
-            stack1 = s1.toString().split("");
-            showStack(stack2 , "stack2");
-            flag = 2;
+            flag = 1;
+            hasDot = 1;
         }
         else{
-            formula.pop();
-            formula.push(target);
-            stack2 = formula.slice();
-            showStack(stack2 , "stack2");
+
+        }
+    }else{
+
+
+    if(mode == 2){
+        if(!isNaN(target)){ //如果是数字
+
+            if(flag==1){
+                stack1.push(target);
+                showStack(stack1 , "stack1");
+                flag = 1;
+            }else{
+                clearStack(stack1);
+                stack1.push(target);
+                showStack(stack1 , "stack1");
+                flag = 1;
+            }
+            
+        }
+        else if(target == "ans"){
+            var tAns = calc(formula);
+            var myAns = Number(stack1.join(""));
+            checkAns(tAns , myAns);
         }
     }
-    console.log(formula+"end");
+    else{
+
+
+        if(!isNaN(target)){ //如果是数字
+
+            if(flag != 4){
+
+                if(flag != 3){ //如果之前没答案
+                    if(flag==1){
+                        stack1.push(target);
+                        showStack(stack1 , "stack1");
+                        flag = 1;
+                    }else{
+                        clearStack(stack1);
+                        stack1.push(target);
+                        showStack(stack1 , "stack1");
+                        flag = 1;
+                    }
+                }else{  //有答案
+                    clearStack(stack1);
+                    clearStack(stack2);
+                    clearStack(formula);
+                    stack1.push(target);
+                    showStack(stack1 , "stack1");
+                    flag = 1;
+                }
+            }else{
+                stack1.pop();
+                stack1.push(target);
+                showStack(stack1 , "stack1");
+                flag = 1;
+            }
+            
+        }else if(target=='='){
+
+            if(stack1.length == 0){
+
+            }else{
+
+                if(flag!=3){
+                    if(stack1.length!=0){
+                        formula.push(Number(stack1.join("")));
+                        var ans = calc(formula);
+                        stack1 = ans.toString().split("");
+                        showStack(stack1 , "stack1");
+                        flag = 3;
+                        clearStack(stack2);
+                        showStack(stack2 , "stack2");
+                    }else{
+                        var ans = calc(formula);
+                        stack1 = ans.toString().split("");
+                        showStack(stack1 , "stack1");
+                        flag = 3;
+                        clearStack(stack2);
+                        showStack(stack2 , "stack2");
+                    }
+                }else{
+                    
+                    var t1 = formula.pop();
+                    var t2 = formula.pop();
+                    formula.push(t2);
+                    formula.push(t1);
+                    formula.push(t2);
+                    formula.push(t1);
+
+                    var ans = calc(formula);
+                    stack1 = ans.toString().split("");
+                    showStack(stack1 , "stack1");
+                    clearStack(stack2);
+                    showStack(stack2 , "stack2");
+                }
+            }
+            hasDot = 0;
+        }else{
+            if(checkDot(stack1)){hasDot = 1;}
+            else{hasDot = 0;}
+            if(flag == 1){
+                if(stack1.length!=0){
+                    formula.push(Number(stack1.join("")));
+                    var s1 = calc(formula);
+                    formula.push(target);
+                    stack2 = formula.slice();
+                    stack1 = s1.toString().split("");
+                    showStack(stack1 , "stack1");
+                    showStack(stack2 , "stack2");
+                    flag = 2;
+                }else{
+                    var s1 = calc(formula);
+                    formula.push(target);
+                    stack2 = formula.slice();
+                    stack1 = s1.toString().split("");
+                    showStack(stack1 , "stack1");
+                    showStack(stack2 , "stack2");
+                    flag = 2;
+                }
+            }
+            else if(flag == 3){
+                clearStack(formula);
+                formula.push(Number(stack1.join("")));
+                var s1 = calc(formula);
+                formula.push(target);
+                stack2 = formula.slice();
+                stack1 = s1.toString().split("");
+                showStack(stack2 , "stack2");
+                flag = 2;
+            }
+            else{
+                formula.pop();
+                formula.push(target);
+                stack2 = formula.slice();
+                showStack(stack2 , "stack2");
+            }
+        }
+    }
+    }
 }
 
 // 显示此时stack（保存当前用户输入）中的数字
@@ -289,6 +310,7 @@ function showStack(s , p){
 }
 
 function clearStack(s){ //清空数组
+    if(s == "stack1"){hasDot = 0;}
     while(s.length){
         s.pop();
     }
@@ -352,6 +374,9 @@ function allClear(){
     stack1.push("0");
     showStack(stack1 , "stack1");
     showStack(stack2 , "stack2");
+    mode = 1;
+    flag = 4;
+    hasDot = 0;
 }
 
 function newFormula(){
@@ -361,5 +386,12 @@ function newFormula(){
     clearStack(stack1);
     showStack(stack1 , "stack1");
     showStack(stack2 , "stack2");
-    flag = 1;
+    mode = 2;
+}
+
+function checkDot(str){
+    for(var i = 0 ; i < str.length ; i ++){
+        if(str[i] == ".") return true;
+    }
+    return false;
 }

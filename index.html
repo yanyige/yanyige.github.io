@@ -9,9 +9,6 @@
 </head>
 
     
-    <input type="button" value="generation" onclick="showFormula()">
-    <input type="text" id="answer">
-    <input type="button" value="提交答案" onclick="checkAns()">
     <p>答案保留2位小数</p>
 
 	<!-- 整个计算器窗体 -->
@@ -20,15 +17,15 @@
 		<div class="show">
 			<input type="text" id="formula">
 			<div id="OutputBlock"><span id="stack2"></span></div>
-			<div id="inputBlock"><span id="stack1"></span></div>
+			<div id="inputBlock" class="clearfix"><span id="stack1"></span></div>
 		</div>  
 		<!-- 控制面板 -->
 		<div class="panel clearfix">
 
-			<div class="digit" onclick='clickPanel()'><i class="fa fa-arrow-up"></i></div>
+			<div class="digit" onclick='negtiveStack1()'>NEG</div>
 			<div class="digit" onclick='allClear()'>CE</div>
 			<div class="digit" onclick='allClear()'>C</div>
-			<div class="digit" onclick='newFormula()'>new!</div>
+			<div class="digit" onclick='newFormula()'>NEW</div>
 			<div class="digit" onclick="clickPanel('/')"><i class="fa fa-percent"></i></div>
 			<div class="digit">PI</div>
 			<div class="digit" onclick='clickPanel(this.innerHTML)'>7</div>
@@ -40,7 +37,7 @@
 			<div class="digit" onclick='clickPanel(this.innerHTML)'>5</div>
 			<div class="digit" onclick='clickPanel(this.innerHTML)'>6</div>
 			<div class="digit" onclick="clickPanel('-')"><i class="fa fa-minus"></i></div>
-			<div class="digit"></div>
+			<div class="digit" onclick='clickPanel("ans")'>ANS</div>
 			<div class="digit" onclick='clickPanel(this.innerHTML)'>1</div>
 			<div class="digit" onclick='clickPanel(this.innerHTML)'>2</div>
 			<div class="digit" onclick='clickPanel(this.innerHTML)'>3</div>
@@ -48,7 +45,7 @@
 			<div class="digit">(</div>
 			<div class="digit">)</div>
 			<div class="digit" onclick='clickPanel(this.innerHTML)'>0</div>
-			<div class="digit">.</div>
+			<div class="digit" onclick='clickPanel(this.innerHTML)'>.</div>
 			<div class="digit" onclick="clickPanel('=')">=</div>
 
 		</div>

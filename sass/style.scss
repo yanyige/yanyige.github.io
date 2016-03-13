@@ -4,11 +4,17 @@ $showBgColor: rgb(242,242,242);
 $bWidth: 50px;
 $bHeight: 40px;
 %fl{float:left}
+%fr{float:right}
 $calWidth: 250px;
 @mixin myFont{
 	font-family: 'Microsoft YaHei',Verdana,Arial,Helvetica,sans-serif;
 	font-weight: bold;
 	line-height: 40px;
+}
+@mixin myDigit{
+	font-family: 'Microsoft YaHei',Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+	line-height: 50px;
 }
 %mg0{margin: 0 auto}
 %tac{text-align: center}
@@ -60,6 +66,7 @@ $calWidth: 250px;
 		@extend %pr;
 		height: 50px;
 		#stack1{
+			@include myDigit;
 			@extend %pa;
 			bottom: 0px;
 		}
@@ -70,6 +77,7 @@ $calWidth: 250px;
 		#stack2{
 			@extend %pa;
 			bottom: 0px;
+			color: #0066cc;
 		}
 	}
 }

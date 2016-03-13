@@ -42,10 +42,14 @@
   .show #inputBlock {
     height: 50px; }
     .show #inputBlock #stack1 {
+      font-family: 'Microsoft YaHei',Verdana,Arial,Helvetica,sans-serif;
+      font-weight: bold;
+      line-height: 50px;
       bottom: 0px; }
   .show #OutputBlock {
     height: 30px; }
     .show #OutputBlock #stack2 {
-      bottom: 0px; }
+      bottom: 0px;
+      color: #0066cc; }
 
 /*# sourceMappingURL=style.css.map */

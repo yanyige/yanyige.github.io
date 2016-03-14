@@ -1,0 +1,45 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+.content{
+	width: 100%;
+	height: 100%;
+}
+
+.section{
+	height: 200px;
+	width: 400px;
+	background-color: #ccc;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	margin-top: -100px;
+	overflow: hidden;
+}
+
+.left-radius{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background-color: #fc0;
+	position: relative;
+	top: -50px;
+	left: -50px;
+}
+
+.right-radius{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background-color: #fc0;
+	position: relative;
+	left: 350px;
+	top: 50px;
+}

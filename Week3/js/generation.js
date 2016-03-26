@@ -33,7 +33,7 @@ const submit = () => {
     var tScore = 0;
     $("#leftBox").hide();
     $("#leftBox1").hide();
-    $("#leftBox2").css({"height":"301px"});
+    $("#leftBox2").css({"height":"320px"});
     $("#leftBox2").fadeIn(2000);
     while(youranss.length){
         youranss.pop();
@@ -87,7 +87,7 @@ const getItem = (MAXNUM, MAXDIGIT, PUNCTUATION, BRACKET) => {
     }
     console.log("zhengquedaan"+ anss);
     showFormula(items);
-    $("#leftBox1").css({"height":"301px"});
+    $("#leftBox1").css({"height":"320px"});
     $("#leftBox1").fadeIn(2000);
 
 }

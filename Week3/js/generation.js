@@ -13,13 +13,13 @@ var youranss = [];
 var score = 0;
 var tScore = 0;
 
-const testScore = () => {
+function testScore(){
     var box = document.getElementsByClassName("guest-score")[0];
     box.innerHTML = box.innerHTML.replace(/()(\d+)$/, "$1");
     box.innerHTML += (score + "");
 }
 
-const alignDiv = (a, b) => {
+function alignDiv(a, b){
     var box1 = document.getElementById(a);
     var box2 = document.getElementById(b);
     var h1 = box1.offsetHeight;
@@ -28,7 +28,7 @@ const alignDiv = (a, b) => {
     box2.style.height = Math.max(h1, h2) + "px";
 }
 
-const submit = () => {
+function submit(){
 
     var tScore = 0;
     $("#leftBox").hide();
@@ -66,26 +66,25 @@ const submit = () => {
     text[5].children[2].innerHTML = '您的总分:' + score;
 }
 
-const back = () => {
+function back(){
     $("#leftBox2").hide();
     $("#leftBox1").hide();
     testScore();
     $("#leftBox").fadeIn(2000);
 }
 
-const test = () => {
+function test(){
     console.log($(".formulas:first"));
     console.log(document.getElementById("problem-table"));
 }
 
-const getItem = (MAXNUM, MAXDIGIT, PUNCTUATION, BRACKET) => {
+function getItem(MAXNUM, MAXDIGIT, PUNCTUATION, BRACKET){
     var items = [];
     $("#leftBox").hide();
     
     for(var i = 0 ; i < 5 ; i ++){
         items.push(getFormula(MAXNUM, MAXDIGIT, PUNCTUATION, BRACKET));
     }
-    console.log("zhengquedaan"+ anss);
     showFormula(items);
     $("#leftBox1").css({"height":"320px"});
     $("#leftBox1").fadeIn(2000);

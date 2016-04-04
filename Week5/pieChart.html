@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pie Charts!</title>
+
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+</body>
+<script type="text/javascript">
+
+	var category = {
+		"学习": 930,
+		"休息": 1545,
+		"编程": 240,
+		"游戏": 390
+	}
+
+
+
+	var proportion = [];
+	var colors = ["cornflowerblue", "coral", "#ffe87c", "greenyellow", "orange"];
+
+	(function init(){
+		var tot = 0;
+		for(var i in category){
+			tot += category[i];
+		}
+
+		for(var i in category){
+			proportion.push(category[i]/tot);
+		}
+	})();
+
+	function gid(id){
+		return document.getElementById(id);
+	}
+
+	var mycanvas = gid("canvas");
+	mycanvas.height = 600;
+	mycanvas.width = 800;
+
+	if(mycanvas.getContext){
+
+		var cxt = mycanvas.getContext("2d");
+
+		var index = 0;
+		var startagl = 0;
+		var endagl;
+		for(var i in category){
+			endagl = startagl + proportion[index];
+			cxt.beginPath();
+			cxt.moveTo(400,300);
+			cxt.arc(400, 300, 100, startagl * 2 * Math.PI, endagl * 2 * Math.PI, false);
+//			cxt.closePath();
+			cxt.fillStyle = colors[index];
+			cxt.fill();
+
+			cxt.fillRect(540, 150+18*index,16,16);
+			cxt.fillStyle="#000000";
+			cxt.fillText(i, 562, 161+18*index );
+
+			startagl = endagl;
+			index++;
+
+		}
+
+
+	}
+
+
+
+</script>
+</html>

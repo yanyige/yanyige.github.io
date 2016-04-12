@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jumbotron.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.5.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js "></script>
+	<script type="text/javascript" src="js/generation.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+<body>
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="javascript:void(0)">快乐运算:)</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+            <button type="submit" class="btn btn-danger">Sign up</button>
+          </form>
+        </div>
+      </div>
+	</nav>
+	<div class="jumbotron">
+      <div class="container">
+      	<div class="row">
+      		<div class="col-md-10">
+				<h3>欢迎来到快乐运算~</h3>
+		        <p>在这里你将攻克各个难题，和不同的人面对难易相近的难题。希望你能披荆斩棘，走向人生巅峰。</p>
+		        <strong>你可以：</strong>
+		        <small>独自通关</small><br>
+		        <small class="ml57">线上对战</small><br><br>
+		        <button class="btn btn-primary btn-xs" href="#" role="button">详细信息 »</button>
+      		</div>
+  			<div class="col-md-2"><div class="thumbnail"><img src="images/logo.jpg" class="thumbnail" width="400em" height="200em"></div></div>
+      	</div>
+      </div>
+    </div>
+    <div class="container black mb30">
+    	<div class="row">
+	        <div class="col-md-5 bgc1 pd20" id="leftBox">
+	            <h4>小试牛刀</h4>
+	            <div class="dropup">
+		        	<button class="btn-warning choose btn-block" data-toggle="dropdown" aria-haspopup="true">
+		        		<h6>选择难度<span class="caret"></span></h6>
+					</button>
+		            <ul class="dropdown-menu btn-block">
+					  <li><a onclick="getItem(10, 4, 2, 0, 1)">白银</a></li>
+					  <li><a onclick="getItem(10, 4, 2, 0, 5)">黄金</a></li>
+					  <li><a onclick="getItem(100, 4, 2, 0, 10)">白金</a></li>
+					  <li><a onclick="getItem(100, 4, 4, 0, 10)">钻石</a></li>
+					  <li><a onclick="getItem(100, 4, 4, 1, 100)">最强王者</a></li>
+					</ul>
+				</div>
+				<div class="info pd20">
+					<img src="images/logo.jpg" class="thumbnail" width="100em" height="100em" style="float:left">
+					<span class="user-name block">姓名：尚未登陆</span>
+					<span class="user-score block">分数：尚未登陆</span>
+					<span class="user-rank block">排名：尚未登陆</span>
+					<span class="guest-score block">测试得分：</span>
+					<span class="guest-score block"><button class="btn-warning choose btn-block" data-toggle="dropdown" aria-haspopup="true" onclick="showAllFormulas()">习题册</button></span>
+				</div>
+	        </div>
+	        <div class="yourans col-md-5 bgc1 pd20" id="leftBox2" style="display: none">
+	        	<h4>看看你的结果吧</h4>
+				<img src="images/logo.jpg" class="thumbnail" width="100em" height="100em" style="float:left">
+				<button class="btn-success" onclick="back()" style="position: absolute; margin-left:30px; margin-top:130px">返回</button>
+				<table id="ans-table" class="table" style="margin-left: 110px; width: calc(100% - 110px)">
+			        <tr>
+			            <th scope="row">1</th>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			        </tr>
+			        <tr>
+			            <th scope="row">2</th>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			        </tr>
+			        <tr>
+			            <th scope="row">3</th>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			        </tr>
+			        <tr>
+			            <th scope="row">4</th>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			        </tr>
+			        <tr>
+			            <th scope="row">5</th>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			        </tr>
+			        <tr>
+			            <th scope="row">#</th>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			        </tr>
+				</table>
+			</div>
+	        <div class="formulas col-md-5 bgc1 pd20" id="leftBox1" style="display: none">
+	        	<h4>请回答下列问题：</h4>
+
+				<table id="problem-table" class="table table-bordered" style="margin-top: 15px;">
+			        <tr>
+			            <th scope="row">1</th>
+			            <td>1+1+1+1+1+1+1+1</td>
+			            <td><input type="text" class="form-control" id="Answer1" placeholder="Answer"></td>
+			        </tr>
+				    <tr>
+				        <th scope="row">2</th>
+				        <td>吴军</td>
+				        <td><input type="text" class="form-control" id="Answer1" placeholder="Answer"></td>
+			        </tr>
+			        <tr>
+			            <th scope="row">3</th>
+			            <td>高鑫</td>				            
+			            <td><input type="text" class="form-control" id="Answer1" placeholder="Answer"></td>
+				    </tr>
+				    <tr>
+				        <th scope="row">4</th>
+			            <td>包玲玲</td>
+			            <td><input type="text" class="form-control" id="Answer1" placeholder="Answer"></td>
+			        </tr>
+			        <tr>
+			            <th scope="row">5</th>
+			            <td>严一格</td>
+			            <td><input type="text" class="form-control" id="Answer1" placeholder="Answer"></td>
+			        </tr>
+				</table>
+				<button class="btn-success btn-block" onclick="submit()" style="margin-top: 50px">提交</button>
+			</div>
+	        <div class="col-md-7 bgc2 pd20" id="rightBox">
+	        	<h4>榜上有名</h4>
+	        	<table class="table">
+	        		<thead>
+						<tr>
+				            <th>#</th>
+				            <th>Username</th>
+				            <th>Score</th>
+				            <th>Rank</th>
+				        </tr>
+			        </thead>
+			        <tr>
+			            <th scope="row">1</th>
+			            <td>彭阳</td>
+			            <td>0</td>
+			            <td>0</td>
+			        </tr>
+			        <tr>
+			            <th scope="row">2</th>
+			            <td>吴军</td>
+			            <td>0</td>
+			            <td>0</td>
+			        </tr>
+			        <tr>
+			            <th scope="row">3</th>
+			            <td>高鑫</td>
+			            <td>0</td>
+			            <td>0</td>
+			        </tr>
+			        <tr>
+			            <th scope="row">4</th>
+			            <td>包玲玲</td>
+			            <td>0</td>
+			            <td>0</td>
+			        </tr>
+			        <tr>
+			            <th scope="row">5</th>
+			            <td>严一格</td>
+			            <td>0</td>
+			            <td>0</td>
+			        </tr>
+				</table>
+	       </div>
+	    </div>
+    </div>
+    <div style="margin-bottom: 20px">
+    	<div class="container">
+    		<div class="row">
+	    		<div class="formulas bgc1 pd20" id="leftBox3" style="display: none">
+		        	<h4>请回答下列问题：</h4>
+
+					<table id="all-problem-table" class="table table-bordered" style="margin-top: 15px;">
+				        <tr>
+				            <th scope="row">题号</th>
+				            <td>题目</td>
+				            <td>正确答案</td>
+				            <td>您的答案</td>
+				        </tr>
+					</table>
+					<button class="btn-success btn-block" onclick="miss()" style="">隐藏</button>
+				</div>
+			</div>
+			<h1 style="display: block">To be continued...</h1>
+    	</div>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+    	<div class="row">
+    		<div class="col-md-6 btn-success" style="min-height: 30px; line-height: 30px; text-align: center">个人匹配</div>
+    		<div class="col-md-6 btn-warning" style="min-height: 30px; line-height: 30px; text-align: center">多人对战</div>
+    	</div>
+    </nav>
+</body> 
+<script type="text/javascript">
+</script>
+</html>

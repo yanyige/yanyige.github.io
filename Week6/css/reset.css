@@ -1,0 +1,49 @@
+.bgc1{
+	color: white;
+	background-color: rgb(38, 39, 41);
+}
+.bgc2{
+	color: white;
+	background-color: rgb(60, 60, 60);
+}
+.choose{
+	line-height: 25px;
+	text-align: center;
+}
+.ml57{
+	margin-left: 61px;
+}
+.dropdown-menu{
+	opacity: 0.8;
+}
+.pd20{
+	padding: 20px;
+}
+.block{
+	display: block;
+}
+.user-name, .user-rank, .user-score{
+	text-indent: 2em;
+	line-height: 33.33px;
+}
+#Answer1{
+	height: 20px;
+	width: 45px;
+}
+th[scope]{
+	width: 4em;
+}
+#problem-table>tbody>tr>td:last-child{
+	width: 8em;
+}
+#problem-table>tbody>tr>td>input{
+	width: 100%;
+}
+.guest-score{
+	margin-top: 30px;
+	text-indent: 9em;
+	line-height: 33.33px;
+}
+.mb30{
+	margin-bottom: 30px;
+}

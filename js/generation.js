@@ -86,11 +86,16 @@ function getFormula(){
 }
 
 function negtiveStack1() { //Stack1取反
+
+    if(stack1.length){
+        if(stack1[0] == '-') return;
+    }
+
     var tStack = [];
     while(stack1.length){
         tStack.push(stack1.pop());
     }
-    Stack1.push("-");
+    stack1.push("-");
     while(tStack.length){
         stack1.push(tStack.pop());
     }

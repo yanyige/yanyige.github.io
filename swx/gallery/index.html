@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.jquery.min.js"></script>
+  <style>
+    marquee{
+        color: white;
+        font-weight: bold;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 18px;
+    }
+    body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 600px;
+        background:url(../bg.jpg);
+        width: 100%;
+    }
+    .swiper-container {
+        width: 800px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+    }
+    .gallery-top {
+        height: 80%;
+        width: 800px;
+    }
+    .gallery-thumbs {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+    }
+    .gallery-thumbs .swiper-slide {
+        height: 100%;
+        opacity: 0.4;
+    }
+    .gallery-thumbs .swiper-slide-active {
+        opacity: 1;
+    }
+  </style>
+  </head>
+<body>
+    <marquee>欢迎来到我的作品展~</marquee>
+    <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(swx.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx1.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx2.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx3.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx4.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx5.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx6.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx7.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx8.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx9.png)"></div>
+        </div>
+    <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+    </div>
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(swx.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx1.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx2.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx3.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx4.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx5.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx6.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx7.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx8.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx9.png)"></div>
+        </div>
+    </div>
+</body>
+    <!-- Initialize Swiper -->
+    <script>
+    var galleryTop = new Swiper('.gallery-top', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 10,
+        loop:true,
+        loopedSlides: 5, //looped slides should be the same     
+    });
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        touchRatio: 0.2,
+        loop:true,
+        loopedSlides: 5, //looped slides should be the same
+        slideToClickedSlide: true
+    });
+    galleryTop.params.control = galleryThumbs;
+    galleryThumbs.params.control = galleryTop;
+    
+    </script>
+ </html>

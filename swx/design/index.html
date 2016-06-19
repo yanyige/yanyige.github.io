@@ -1,0 +1,70 @@
+﻿<html>
+  <head>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.jquery.min.js"></script>
+  <style>
+    marquee{
+        color: white;
+        font-weight: bold;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 18px;
+    }
+    body {
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 600px;
+        background:url(../bg.jpg);
+        width: 100%;
+    }
+    .swiper-container {
+        width: 600px;
+        height: 600px;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        margin-left: -300px;
+        margin-top: -300px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+    }
+  </style>
+  </head>
+<body>
+    <marquee>欢迎来看我的服装设计~</marquee>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(swx.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx1.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx2.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx3.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx4.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx5.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx6.png)"></div>
+            <div class="swiper-slide" style="background-image:url(swx7.png)"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</body>
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'cube',
+        grabCursor: true,
+        cube: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94
+        }
+    });
+    </script>
+ </html>

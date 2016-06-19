@@ -1,0 +1,88 @@
+﻿ .block {  background:#f0f0f0;
+    
+    border: 1px solid #CCCCCC;
+    float: right;
+    width: 260px;
+    height: 272px;
+ 
+}
+.bao{ background:none;margin-left:3px; border-bottom:0px;}
+.bao td { font-size:12px;
+   padding-left:4px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: left;padding-right:2px;
+       color: 474747;
+       border-bottom:dashed 1px #d8d8d8;
+}.bao a {
+    color: #474747;
+    text-decoration: none;
+   
+}
+.block h5 {
+    color: #333;
+    font-size: 11.5px;
+    line-height: 28px;
+    height:28px;
+    padding-left: 5px;
+    background:#e0e0e0;
+}
+.block h5 a{
+font-weight:normal;
+}
+#banner {
+ float:left;width:698;height:268px;border:solid 1px #ccc;padding:2px;
+ 
+ 
+}
+ 
+UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+} 
+ 
+
+#banner #ifocus {
+	POSITION: relative; WIDTH: 698px; HEIGHT: 268px
+}
+#banner #ifocus_pic {
+	POSITION: relative; WIDTH: 698px; DISPLAY: inline; FLOAT: left; HEIGHT: 268px; OVERFLOW: hidden
+}
+#banner #ifocus_piclist {
+	Z-INDEX: 1; POSITION: absolute
+}
+#banner #ifocus_piclist LI {
+	WIDTH: 698px; HEIGHT: 268px; OVERFLOW: hidden
+}
+#banner #ifocus_piclist IMG {
+	WIDTH: 698px; HEIGHT: 268px
+}
+#banner #ifocus_btn {
+	Z-INDEX: 3; POSITION: absolute;   WIDTH: 698px; BOTTOM: 1px; HEIGHT: auto;   _bottom: 1px;
+right:5px;
+}
+UNKNOWN {
+	BOTTOM: 5px
+}
+#banner #ifocus_btn LI {
+	FILTER: alpha(opacity=80); PADDING-BOTTOM: 0px; /*MARGIN-TOP: 10px; */PADDING-LEFT: 7px; WIDTH: auto; PADDING-RIGHT: 7px; DISPLAY: block; FLOAT: left; HEIGHT: auto; CURSOR: pointer; PADDING-TOP: 0px; opacity: 0.8; -moz-opacity: 0.8;
+	 margin-left:3px;background:#fff;font-weight:bold;height:17px;padding-top:3px;
+}
+#banner #ifocus_btn IMG {
+	BORDER-BOTTOM: #ffffff 1px solid; BORDER-LEFT: #ffffff 1px solid; WIDTH: 17px; HEIGHT: 16px; BORDER-TOP: #ffffff 1px solid; BORDER-RIGHT: #ffffff 1px solid
+}
+#banner #ifocus_btn .current {height:17px;
+	TEXT-ALIGN: left; FILTER: alpha(opacity=100); MARGIN-TOP: 0px; DISPLAY: block; FLOAT: left; opacity: 1; -moz-opacity: 1
+}
+#banner #ifocus_btn .current  {
+ float:left;background:#FF7D01;color:#fff;
+}
+#banner #ifocus_opdiv sss{
+	Z-INDEX: 2; POSITION: absolute; FILTER: alpha(opacity=50); WIDTH: 698px; BOTTOM: 0px; BACKGROUND: #000; HEIGHT: 20px; LEFT: 0px; opacity: 0.5; -moz-opacity: 0.5; _height: 45px
+}
+#banner #ifocus_tx {
+	Z-INDEX: 3; POSITION: absolute; BOTTOM: 8px; COLOR: #fff; LEFT: 8px
+}
+#banner #ifocus_tx .normal {
+	DISPLAY: none;font-weight:bold;height:17px;
+	
+}

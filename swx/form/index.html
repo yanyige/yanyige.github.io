@@ -1,0 +1,139 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/css" charset="utf-8">
+  <style type="text/css">
+   .contact {color:#D43E2A;
+	          font-size: 28px;
+	          font-weight: bold;}
+   body{background:url(../bg.jpg);
+        margin-top: 6px;}
+   table{font-size: 24px;
+         color: white;
+         font-weight: bold;
+         border:0px;
+         }
+   .red{background-color:#D43E2A; }
+  </style>
+  <script language="JavaScript">
+    function Verify( )								
+    {if(VerifyUsrName( )==false) return false;     
+     if(Verifyemail( )==false) return false;     
+     if(Verifytel( )==false) return false; }
+    function VerifyUsrName( )
+    {if(document.reg_form.usrname.value.length==0)
+      {alert(" 姓名不能为空");
+        return false; }
+     if(validOfUsrName( )==false)
+      {alert("包含非法字符，请重新输入");
+        return false; }
+         return true;}
+    function validOfUsrName( )
+    {valid=true;
+     for(var i=0;i<document.reg_form.usrname.value.length;i++)
+        {var ch=document.reg_form.usrname.value.charAt(i);
+         if(!((ch>="0") && (ch<="9")) && !((ch>="a") && (ch<="z")) && !((ch>="A") && (ch<="Z"))&& !(ch=="_"))
+            valid=false;
+         if (!valid) 
+             break;}
+         return valid;}
+    function Verifyemail( )
+    {if(document.reg_form.email.value.length==0)
+        {alert("E-mail 不能为空，请重新输入");
+         return false; }
+	   if(document.reg_form.email.value.indexOf("@")==-1)
+	     {alert(" E-mail地址错误");
+	      return false;}s
+        return true;}
+    function Verifytel( )
+    {valid=true;
+     for (var i=0;i<document.reg_form.tel.value.length;i++)
+         {var ch=document.reg_form.tel.value.charAt(i);
+     if(!((ch>="0") && (ch<="9")))
+         {valid=false;
+		      alert("电话错误");}
+     if (!valid) 
+        break;}
+     return valid;}
+  </script>
+</head>
+<body>
+<center>
+<table onload="init( )">
+  <tr>
+    <td height="96" colspan="2" align=center valign=top><p>&nbsp;</p>      <p class="contact">Contact me</p></td>
+  </tr>
+  <tr>
+    <td width="9" align=center valign=top>&nbsp;</td>
+    <td width="1002" height="445" align=center valign=top><form action="register.asp" method="get" name="reg_form" 
+onSubmit="return Verify( )">
+     <table  width=590  border=1 cellpadding=4 bordercolor=white style="font-size:18px;align:left;">
+       <tr>
+          <td class="red" width=534 height=32 ailgn=left >&nbsp; <div align="left">姓名:&nbsp;&nbsp;&nbsp;
+                <input type=text size=16 name="usrname"> 
+            **</div></td>
+          </tr>
+       <tr>
+          <td class="red" ><label for="1">性 别</label>&nbsp;&nbsp;
+              <input type="radio" id="1" name="ssex" value="nan" />男
+              <input type="radio" id="2" name="ssex" value="nv" />女 
+          </td> 
+       </tr> 
+       <tr>
+          <td class="red">地 区:&nbsp;&nbsp;
+            <select id="selc" name="place"> 
+               <option value="liaoning">辽宁</option> 
+               <option value="jilin">吉林</option> 
+               <option value="heilongjiang" >黑龙江</option> 
+               <option value="xizang" >西藏</option> 
+               <option value="xinjiang" >新疆</option> 
+               <option value="hunan" >湖南</option> 
+               <option value="jiangsu" >江苏</option> 
+               <option value="sichuan" >四川</option> 
+               <option value="zhejiang" >浙江</option> 
+               <option value="shanxi" >陕西</option> 
+              </select> 
+            </td> 
+       </tr> 
+       <tr>
+          <td class="red"   align=left >
+            <div align="left">E-mail:
+              <input name="email" type="text" id="email">**
+            </div>
+          </td>
+       </tr>
+       <tr>
+         <td  class="red"   align=left >
+            <div align="left">电话:&nbsp;&nbsp;&nbsp;
+                <input name="tel" type="text" id="tel">
+            </div>
+         </td>
+       </tr>
+       <tr>
+         <td class="red">兴 趣：&nbsp;&nbsp;
+              <input type="checkbox" id="cbox1" name="dushu" value="c1">读书 
+              <input type="checkbox" id="cbox2" name="yundong" value="c2">运动 
+              <input type="checkbox" id="cbox3"name="chihe" value="c3">唱歌 
+         </td> 
+       </tr> 
+       <tr>
+         <td class="red" >上 传：&nbsp;&nbsp;
+             <input type="file" id="f1" name="shangchuan" value="File1" />
+         </td>  
+       </tr> 
+       <tr>
+         <td class="red"><label for="txtarea">留 言：</label>
+           <textarea id="txtarea" style="margin: 0px; width: 463px; height: 70px;"></textarea>
+         </td> 
+       </tr> 
+         <td class="red">
+         <center>
+            <input type=submit value="&#25552;&#20132;">&nbsp;&nbsp;
+            <input type=reset value="&#37325;&#22635;">
+         </center>
+         </td>
+   </form></td>
+   </tr>
+  </table>
+  </center>
+</body>
+</html>

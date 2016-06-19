@@ -1,0 +1,11 @@
+*（1.建议在谷歌浏览器里浏览
+     2.ps中的动图只在IE中显示）
+index:整个网站的首页，用javascript中的函数改变网页的边框颜色
+ps文件夹中的网页：用  javascript中的settimeout方法实现图片轮播
+form文件夹中的网页：1.用javascript的alert方法和函数
+                                        2.用了表单中的输入标记，复选框，下                                          拉菜单
+myhtml文件夹中的网页:只用html做的网页
+htmlcss文件夹中的网页：用html和css做的网页
+整体运用了html,css和js技术
+其中除照片外，其他图片均亲自制作。
+布局：使用div布局，使用了盒子模型

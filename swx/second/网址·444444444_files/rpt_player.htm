@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)http://v.qq.com/dtest/play/rpt_player.html?vid=e0020luwtuv&ptag=bl.rx.pn4.4&domain=s11&dmid=1259040629&dmwid=1259040629 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>腾讯视频</title>
+		<script language="javascript">
+			try{
+				document.domain="qq.com";
+			}catch(e){}
+		</script>
+		<meta http-equiv="expires" content="0">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		
+	<script async="" src="tvp.config.js" charset="utf-8"></script><script async="" src="flashplayer.js" charset="utf-8"></script></head>
+	<body>
+		<script src="tvp.player_v2.js" type="text/javascript"></script>
+		<div id="mod_player" style="position:absolute; left:0px; top:0px;"><div id="mod_tenvideo_flash_player_1463495982382" class="tenvideo_player"><embed wmode="direct" flashvars="vid=e0020luwtuv&amp;tpid=0&amp;showend=1&amp;showcfg=1&amp;searchbar=1&amp;shownext=1&amp;list=2&amp;autoplay=1&amp;ptag=bl.rx.pn4.4&amp;volume=0" src="http://imgcache.qq.com/tencentvideo_v1/player/TPout.swf?max_age=86400&amp;v=20140714" quality="high" name="tenvideo_flash_player_1463495982382" id="tenvideo_flash_player_1463495982382" bgcolor="#000000" width="400px" height="300px" align="middle" allowscriptaccess="always" allowfullscreen="true" type="application/x-shockwave-flash" pluginspage="http://get.adobe.com/cn/flashplayer/"></div></div>
+		<script>
+			(function(){
+				var data = {
+					"vid": "",
+					"cid": "",
+					"auto":"1",
+					"ptag":"",
+					"width": "400",
+					"height": "300",
+					"domain": "",
+					"dmid": "",
+					"dmwid": ""
+				};
+				tvp.$.each(data, function(k) {
+					var v = tvp.$.getUrlParam(k);
+					if (v != "") {
+						data[k] = decodeURIComponent(v);
+						data[k] = tvp.$.filterXSS(data[k]);
+					}
+				});
+				if(!data.vid){
+					document.write('没有找到vid参数!');
+					return;
+				}
+				var video = new tvp.VideoInfo();
+				video.setVid(data.vid);
+				var player = new tvp.Player();
+				player.create({
+				  width  : data.width,
+				  height : data.height,
+				  video  : video,
+				  modId  : "mod_player",
+				  isHtml5ShowLoadingAdOnStart : true,
+				  loadingadAutoplay : true,
+				  autoplay: data.auto==="0"?0:1,
+				  vodFlashExtVars   : {ptag:data.ptag,volume:0}
+				});
+				
+				var url="http://s11.cnzz.com/stat.php?id=1258164450&web_id=1258164450";
+				if (data.ptag==='bl.rx.pn3.1')url="http://s11.cnzz.com/stat.php?id=1258981198&web_id=1258981198";
+				else if(data.ptag==="bl.rx.pn3.2")url="http://s4.cnzz.com/stat.php?id=1258981344&web_id=1258981344";
+				else if(data.ptag==="bl.rx.pn3.3")url="http://s11.cnzz.com/stat.php?id=1258981353&web_id=1258981353";
+				else if(data.ptag==="bl.rx.pn3.4")url="http://s4.cnzz.com/stat.php?id=1258981368&web_id=1258981368";
+				else if(data.ptag==="bl.rx.pn3.5")url="http://s4.cnzz.com/stat.php?id=1258981402&web_id=1258981402";
+				else if(data.ptag==="bl.rx.pn3.6")url="http://s4.cnzz.com/stat.php?id=1258981427&web_id=1258981427";
+				else if(data.ptag==="bl.rx.pn03.1")url="http://s11.cnzz.com/stat.php?id=1258981450&web_id=1258981450";
+				else if(data.ptag==="bl.rx.pn03.2")url="http://s95.cnzz.com/stat.php?id=1258981797&web_id=1258981797";
+				else if(data.ptag==="bl.rx.pn03.3")url="http://s95.cnzz.com/stat.php?id=1258981807&web_id=1258981807";
+				else if(data.ptag==="bl.rx.pn03.4")url="http://s4.cnzz.com/stat.php?id=1258981821&web_id=1258981821";
+				else if(data.ptag==="bl.rx.pn03.5")url="http://s95.cnzz.com/stat.php?id=1258981924&web_id=1258981924";
+				else if(data.ptag==="bl.rx.pn03.6")url="http://s11.cnzz.com/stat.php?id=1258981931&web_id=1258981931";
+				else{
+				  url="http://"+data.domain+".cnzz.com/stat.php?"+"id="+data.dmid+"&web_id="+data.dmwid;	
+				}
+
+				var msg='<div style="display:none"><script src="'+url+'" language="JavaScript"><\/script><\/div>';
+				document.write(msg);
+			})();
+		</script><div style="display:none"><script src="stat(2).php" language="JavaScript"></script><script src="core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1259040629" target="_blank" title="站长统计">站长统计</a></div>
+		
+	
+</body></html>

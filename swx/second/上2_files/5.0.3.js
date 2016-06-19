@@ -1,0 +1,1 @@
+document.write('<link type="text/css" rel="stylesheet" href="http://s8.qhimg.com/static/458d9383b5f2765d.css"/><script charset="utf-8" src="http://s2.qhimg.com/static/7f4554cb9f6e757f.js"></script>')

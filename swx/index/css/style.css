@@ -1,4 +1,4 @@
-.titlezsn{height: 135px;
+.title{height: 135px;
           padding-left: 30px;
           line-height: 240px;
           overflow: hidden;
@@ -12,8 +12,8 @@
         overflow: hidden;
         }
 .nav ul li{
-        float: left;
-        width: 215px;
+        display: inline-block;
+        width: 10%;
         text-align: center;
         font-weight: bold;
         height: 40px;

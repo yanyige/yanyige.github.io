@@ -1,0 +1,342 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix::after {
+    content:"";
+    display: table;
+    clear: both;
+    overflow: hidden;
+}
+
+P{
+    font-family: sans-serif;
+}
+
+.flt{
+    float: left;
+}
+
+#wrap{position:relative }
+
+#eg1_block1{
+    height:50px;
+    width: 50px;
+    background-color: green;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+#eg1_block2{
+    height:50px;
+    width: 50px;
+    background-color: crimson;
+    border-radius: 10px;
+    margin: 0 5px;
+}
+
+#eg1_block3{
+    height:25px;
+    width: 50px;
+    background-color: crimson;
+    border-radius: 25px 25px 0px 0px;
+    margin: 0 5px;
+}
+
+#eg1_block4{
+    height:25px;
+    width: 50px;
+    background-color: aqua;
+    border-radius: 0px 0px 25px 25px;
+    margin: 0 5px;
+}
+
+#eg1_block5{
+    height:50px;
+    width: 25px;
+    background-color: brown;
+    border-radius: 25px 0px 0px 25px;
+    margin: 0 5px;
+}
+
+#eg1_block6{
+    height:50px;
+    width: 25px;
+    background-color: cornflowerblue;
+    border-radius: 25px 0px 25px 0px;
+    margin: 0 5px;
+}
+
+#eg2_block1 {
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    box-shadow: 5px 5px 10px 1px;
+    margin: 0 5px;
+}
+
+#eg2_block2{
+    height: 50px;
+    width: 50px;
+    background-color: crimson;
+    box-shadow: 5px 5px 10px 1px inset;
+    margin: 0 5px;
+}
+
+#eg2_block3{
+    height:50px;
+    width: 50px;
+    background-color: green;
+    border-radius: 10px;
+    margin: 0 5px;
+    box-shadow: 5px 5px 10px 1px;
+}
+
+#eg2_block4{
+    height: 50px;
+    width: 50px;
+    background-color: crimson;
+    box-shadow: 5px 5px 10px 1px inset;
+    margin: 0 5px;
+    border-radius: 10px;
+}
+
+#eg3_content {
+    height: 100px;
+    width: 300px;
+    border: solid 15px transparent;
+    border-image:url("../image/border.png") 30 30 30 30 round;
+}
+
+#eg4_block{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(255,153,0,0.2);
+}
+
+#eg4_block1{
+    height: 100px;
+    width: 100px;
+    background-image:linear-gradient(90deg , red , orange , yellow , green , lightblue , blue , purple);
+}
+
+#eg5_content{
+    border: 1px solid;
+    height:50px;
+    width:300px;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-shadow: 0 1px 1px #000;
+}
+
+#eg5_content1{
+    border: 1px solid;
+    height:40px;
+    width:300px;
+
+    display: -webkit-box !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /*显示的行数*/
+}
+
+#eg5_content2{
+    margin:10px 0px;
+    border: 1px solid;
+    height:40px;
+    width:300px;
+}
+
+#eg6{
+    position: absolute;
+    width:100px;
+    background-color: beige;
+    position: fixed;
+    top:50%;
+    right:-80px;
+    /*居中*/
+    -webkit-transform: translate(0% , -50%);
+    -moz-transform: translate(0% , -50%);
+    transform: translate(0% , -50%);
+
+    /*动画*/
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+
+}
+
+.e6b{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#eg6:hover{
+    right: 0px;
+    cursor: Pointer;
+}
+
+.eg7_bg1{
+    width: 100%;
+    height: 600px;
+    background-image: url(../image/bg1_1600.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.eg7_bg2{
+    width: 100%;
+    height: 600px;
+    -webkit-background-size: cover;
+    background-image: url(../image/avds.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.eg7_bg3{
+    width: 100%;
+    height: 600px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-image: url(../image/bg3_1600.jpg);
+    background-attachment: fixed;
+}
+
+#eg9_wrap{
+    display: flex;
+    flex-direction:row;
+
+}
+
+#eg9_wrap2{
+    display: flex;
+    flex-direction:column;
+    align-items: flex-end;
+}
+
+div[class^="eg9_box"]{
+    height:50px;
+    width :50px;
+    background-color: aquamarine;
+    margin: 10px 10px;
+}
+
+#eg10{
+    heigth:450px;
+    width:300px;
+    overflow: hidden;
+}
+#eg10_list{
+    width:1800px;
+    animation-name:moveimg;
+    animation-iteration-count:infinite;
+    animation-duration:18s;
+}
+#eg10_list:hover{
+    animation-play-state: paused;;
+}
+#eg10_list img{
+    height:450px;
+    width:300px;
+    float: left;
+}
+#eg10_carousel{
+    width:300px;
+    height:450px;
+    overflow: hidden;
+    position:relative;
+}
+
+@keyframes moveimg {
+    0%{
+        transform:translate(0px,0px);
+    }
+    25%{
+        transform:translate(-300px,0px);
+    }
+    50%{
+        transform:translate(-600px,0px);
+    }
+    75%{
+        transform:translate(-900px,0px);
+    }
+    100%{
+        transform:translate(-1200px,0px);
+    }
+}
+
+#box1{
+    flex-grow:2;
+}
+#box2{
+    flex-grow:2;
+}
+#box3{
+    flex-grow:2;
+}
+#box4{
+    flex-grow:2;
+}
+#box5{
+    flex-grow:2;
+}
+#box6{
+    flex-grow:1;
+}
+
+#eg11_wrap{
+    display: table-cell;
+    height: 200px;
+    width: 800px;
+    background-color: red;
+    vertical-align: middle;
+}
+
+.vertileCenter{
+    vertical-align: middle;
+}
+
+#eg12_wrap>.triangleBox{
+    width: 500px;
+    height: 100px;
+    border: 5px solid #386fa2;
+    position: absolute;
+}
+
+#eg12_wrap>.triangleBox:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 0.4rem;
+    margin-left: 500px;
+    border-right: 20px dashed transparent;
+    border-top: 20px dashed transparent;
+    border-left: 20px dashed #386fa2;
+    border-bottom: 20px dashed transparent;
+}
+
+#eg12_wrap>.triangleBox:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 0.4rem;
+    margin-left: 348px;
+    border-right: 20px dashed transparent;
+    border-top: 20px dashed transparent;
+    border-left: 20px dashed azure;;
+    border-bottom: 20px dashed transparent;
+}

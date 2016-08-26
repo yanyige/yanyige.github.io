@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3效果</title>
+    <link rel="stylesheet" type="text/css" href="css/index_css.css">
+    <script src="js/jquery-3.0.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery.easing.1.3.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <!--************************************************************这里是内容**********************************************************-->
+
+<div id="wrap">
+    <!--************************************************************边框**********************************************************-->
+    <div id="eg1">
+        <p>eg1.用css3的border-radius实现的一些图形</p>
+        <div id="eg1_block1" class="flt"></div>
+        <div id="eg1_block2" class="flt"></div>
+        <div id="eg1_block3" class="flt"></div>
+        <div id="eg1_block4" class="flt"></div>
+        <div id="eg1_block5" class="flt"></div>
+        <div id="eg1_block6" class="flt"></div>
+        <div style="clear: both"></div>
+    </div>
+
+
+    <div id="eg2">
+        <p>eg2.css3阴影效果</p>
+        <div id="eg2_block1" class="flt"></div>
+        <div id="eg2_block2" class="flt"></div>
+        <div id="eg2_block3" class="flt"></div>
+        <div id="eg2_block4" class="flt"></div>
+        <div style="clear: both"></div>
+    </div>
+
+
+    <div id="eg3">
+        <p>eg3.css3的border-image效果(round会压缩（或伸展）图片大小使其正好在区域内显示,而repeat会直接居中重复)</p>
+        <div id="eg3_content">快看我的边框!(round会压缩（或伸展）图片大小使其正好在区域内显示,而repeat会直接居中重复)</div>
+    </div>
+    <hr>
+
+        <!--************************************************************颜色**********************************************************-->
+
+    <div id="eg4">
+        <p>eg4.css3背景色透明效果</p>
+        <div id="eg4_block"></div>
+        <p>eg4.css3颜色渐变效果</p>
+        <div id="eg4_block1"></div>
+    </div>
+    <hr>
+        <!--************************************************************文字和字体**********************************************************-->
+
+    <div id="eg5">
+        <p>eg5.文字单行显示,溢出则显示...以及文字阴影</p>
+        <div id="eg5_content">
+            我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行我只有一行
+        </div>
+        <p>文字多行显示,溢出则显示...</p>
+        <div id="eg5_content1">
+            我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行
+        </div>
+        <div id="eg5_content2">
+            <p>我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行我只有很多行</p>
+        </div>
+    </div>
+
+        <!--************************************************************纯CSS实现导航菜单**********************************************************-->
+    <div id="eg6">
+        <div id="eg6_block">
+            <div id="eg6_b1" class="e6b" scrollto="#eg1">1.圆角效果</div>
+            <div id="eg6_b2" class="e6b" scrollto="#eg2">2.阴影效果</div>
+            <div id="eg6_b3" class="e6b" scrollto="#eg3">3.边框图片border-image效果(round会压缩（或伸展）图片大小使其正好在区域内显示,而repeat会直接居中重复)</div>
+            <div id="eg6_b4" class="e6b" scrollto="#eg4">4.背景色透明效果</div>
+            <div id="eg6_b5" class="e6b" scrollto="#eg5">5.文字单行和多行溢出显示</div>
+            <div id="eg6_b6" class="e6b" scrollto="#eg6">6.css导航菜单</div>
+            <div id="eg6_b7" class="e6b" scrollto="#eg7">7.模仿imqq的主页效果</div>
+            <div id="eg6_b9" class="e6b" scrollto="#eg9">9.FlexBox布局</div>
+            <div id="eg6_b10" class="e6b" scrollto="#eg10">10.图片展示栏目</div>
+            <div id="eg6_b11" class="e6b" scrollto="#eg11">11.多行文本垂直居中</div>
+        </div>
+        <!-- 用到了transition属性-->
+    </div>
+
+
+        <!--************************************************************im qq主页background-attachment:fixed**********************************************************-->
+    <div id="eg7">
+        <p>eg7.background-attachment:fixed</p>
+        <div id="eg7_wrap">
+            <img src="image/img-cloud-2.png" class="eg7-cloud" style="position: absolute; width:600px; height: 400px;">
+            <div class="content" id="content1" style="background-color: aquamarine;width: 100%;height: 300px;"></div>
+            <div class="eg7_bg1"></div>
+            <div class="content" id="content2" style="background-color: bisque;width: 100%;height: 300px;"></div>
+            <div class="eg7_bg2"></div>
+            <div class="content" id="content3" style="background-color: burlywood;width: 100%;height: 300px;"></div>
+            <div class="eg7_bg3"></div>
+        </div>
+        <!-- 其中background-position代表背景图片的位置,设置成百分比的时候代表(父div-自div)*x-->
+    </div>
+
+    <div id="eg8">
+        <p>与背景有关的一些函数</p>
+    </div>
+
+    <div id="eg9">
+        <p>eg9.FlexBox布局</p>
+        <div id="eg9_wrap">
+            <!--主轴方向row-->
+            <div class="eg9_box1" id="box1"></div>
+            <div class="eg9_box2" id="box2"></div>
+            <div class="eg9_box3" id="box3"></div>
+            <div class="eg9_box4" id="box4"></div>
+            <div class="eg9_box5" id="box5"></div>
+            <div class="eg9_box6" id="box6"></div>
+        </div>
+        <div id="eg9_wrap2">
+            <!--主轴方向column-->
+            <div class="eg9_box1"></div>
+            <div class="eg9_box2"></div>
+            <div class="eg9_box3"></div>
+        </div>
+    </div>
+    <div id="eg10">
+        <p>eg10.图片展示栏目</p>
+        <div id="eg10_list">
+            <img src="image/eg.jpg">
+            <img src="image/户外.jpg">
+            <img src="image/清纯.jpg">
+            <img src="image/美女.jpg">
+            <img src="image/eg.jpg">
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <div id="eg11">
+        <p>eg11.多行文本垂直居中</p>
+        <div id="eg11_wrap">
+            <span class="vertileCenter">
+                这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中这里是多行文字居中
+            </span>
+        </div>
+    </div>
+    <div id="eg12">
+        <p>eg12.带三角提示框</p>
+        <div id="eg12_wrap" class="clearfix">
+            <div class="triangleBox">
+                这里显示详细信息。
+            </div>
+        </div>
+    </div>
+
+
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+<div style="height:100px;background-color: azure"></div>
+
+</div>
+
+
+</body>
+<script src="js/index_js.js"></script>
+
+</html>

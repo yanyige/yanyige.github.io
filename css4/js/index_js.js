@@ -35,17 +35,7 @@ $(document).ready(function(){
             var posY = t3+"px";
             $(".eg7_bg3").stop().animate({"background-positionx":posX, "background-position-y":posY}, 3000, 'easeOutQuint');
         });
-        $('#eg7_wrap').mousemove(function(ev){
-            var event = ev || window.event;
-            //get the pos of the dom
-            var pageX = event.pageX;
-            var pageY = event.clientY;
-            var posX = pageX * 0.009;
-            var posY = pageY * 0.009;
-            var ret = 'translate3D(' + posX + 'px, ' + posY + 'px, 0px)';
-            console.log(ret);
-            $('.eg7-cloud').css('transform', ret);
-        });
+        
     }
     $.imqq();
 
@@ -162,6 +152,17 @@ $(document).ready(function(){
             }
             draw();
         }, 16);
+
+        $('#eg13').mousemove(function(ev){
+            var event = ev || window.event;
+            //get the pos of the dom
+            var pageX = event.pageX;
+            var pageY = event.clientY;
+            var posX = pageX * 0.009;
+            var posY = pageY * 0.009;
+            var ret = 'translate3D(' + posX + 'px, ' + posY + 'px, 0px)';
+            $('.eg7-cloud').css('transform', ret);
+        });
     }
     $.sportsBall();
 });

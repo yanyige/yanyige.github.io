@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 	jQuery.sportsBall = function(){
          //定义画布宽高和生成点的个数
-        var WIDTH = window.innerWidth, HEIGHT = 6000, POINT = 35;
+        var WIDTH = document.documentElement.clientWidth, HEIGHT = 6000, POINT = 35;
         
         var canvas = document.getElementById('canvas');
         canvas.width = WIDTH,

@@ -131,7 +131,8 @@ nav {
 }
 
 .universe {
-	background-image: url('../image/track.png');
+	background-image:url('../image/track.png');
+	// background-image: url('../image/track.png'),url('../image/trackBall.png.png')url('../image/trackBall1.png.png'),url('../image/trackBall2.png.png'),url('../image/trackBall3.png.png'),url('../image/trackBall4.png.png');
 	background-size: cover;
 	min-height: 1500px;
 }
@@ -147,6 +148,8 @@ nav {
 
 .track-wrapper {
 	position: absolute;
+	min-height: 1500px;
+	width: 100%;
 }
 .trackBall {
 	position: absolute;
@@ -215,4 +218,35 @@ nav {
     -moz-osx-font-smoothing: grayscale;
     -webkit-backface-visibility: hidden;
     text-align: justify;
+}
+
+#trackBall {
+	background-image: url("../image/trackBall.png");
+	background-repeat: no-repeat;
+	background-position: 200px 730px;
+}
+#trackBall1 {
+	background-image: url("../image/trackBall1.png");
+	background-repeat: no-repeat;
+	background-position: 350px 885px;
+}
+#trackBall2 {
+	background-image: url("../image/trackBall2.png");
+	background-repeat: no-repeat;
+	background-position: 600px 920px;
+}
+#trackBall3 {
+	background-image: url("../image/trackBall3.png");
+	background-repeat: no-repeat;
+	background-position: 950px 870px;
+}
+#trackBall4 {
+	background-image: url("../image/trackBall4.png");
+	background-repeat: no-repeat;
+	background-position: 1500px 730px;
+}
+#trackBall5 {
+	background-image: url("../image/trackBall5.png");
+	background-repeat: no-repeat;
+	background-position: 1450px 530px;
 }

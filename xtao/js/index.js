@@ -70,6 +70,10 @@ $(document).ready(function(){
             var posX = "50%";
             var posY = t1+"px";
             $(".universe").stop().animate({"background-positionx":posX, "background-position-y":posY}, 3000, 'easeOutQuint');
+            Array.prototype.slice.call($(".track-wrapper"), 0).forEach( function(element, index) {
+                posY = t1 + $(element).data('top') + "px";
+                $(element).stop().animate({"background-positionx":posX, "background-position-y":posY}, 3000, 'easeOutQuint');
+            });
         });
 	}
 	$.slideScroll();

@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 	jQuery.sportsBall = function(){
          //定义画布宽高和生成点的个数
-        var WIDTH = window.innerWidth, HEIGHT = 3000, POINT = 35;
+        var WIDTH = window.innerWidth, HEIGHT = 6000, POINT = 35;
         
         var canvas = document.getElementById('canvas');
         canvas.width = WIDTH,
@@ -115,7 +115,7 @@ $(document).ready(function(){
         function drawCricle (cxt, x, y, r, moveX, moveY) {
             var circle = new Circle(x, y, r, moveX, moveY)
             cxt.beginPath()
-            context.fillStyle = 'rgba(100,0,238,0.2)';
+            context.fillStyle = 'rgba(36,240,255,0.3)';
             cxt.arc(circle.x, circle.y, circle.r, 0, 2*Math.PI)
             cxt.closePath()
             cxt.fill();
@@ -125,7 +125,7 @@ $(document).ready(function(){
         function drawLine (cxt, x, y, _x, _y, o) {
             var line = new Line(x, y, _x, _y, o)
             cxt.beginPath()
-            cxt.strokeStyle = 'rgba(0,0,255,0.1)'
+            cxt.strokeStyle = 'rgba(36,240,255,0.03)'
             cxt.moveTo(line.beginX, line.beginY)
             cxt.lineTo(line.closeX, line.closeY)
             cxt.closePath()
@@ -148,18 +148,26 @@ $(document).ready(function(){
                 drawCricle(context, circleArr[i].x, circleArr[i].y, circleArr[i].r);
             }
             for (var i = 0; i < POINT; i++) {
-                for (var j = i; j < i + 10; j++) {
-                    if (i + j < POINT) {
-                        var A = Math.abs(circleArr[i+j].x - circleArr[i].x),
-                            B = Math.abs(circleArr[i+j].y - circleArr[i].y);
+                var j = i - 1;
+                    if (j < POINT && j > 0) {
+                        var A = Math.abs(circleArr[j].x - circleArr[i].x),
+                            B = Math.abs(circleArr[j].y - circleArr[i].y);
                         var lineLength = Math.sqrt(A*A + B*B);
                         var C = 1/lineLength*7-0.009;
                         var lineOpacity = C > 0.03 ? 0.03 : C;
-                        if (lineOpacity > 0) {
-                            drawLine(context, circleArr[i].x, circleArr[i].y, circleArr[i+j].x, circleArr[i+j].y, lineOpacity);
-                        }
+                        drawLine(context, circleArr[i].x, circleArr[i].y, circleArr[j].x, circleArr[j].y, lineOpacity);
+                        
                     }
-                }
+                j = i + 1;
+                    if (j < POINT && j > 0) {
+                        var A = Math.abs(circleArr[j].x - circleArr[i].x),
+                            B = Math.abs(circleArr[j].y - circleArr[i].y);
+                        var lineLength = Math.sqrt(A*A + B*B);
+                        var C = 1/lineLength*7-0.009;
+                        var lineOpacity = C > 0.03 ? 0.03 : C;
+                        drawLine(context, circleArr[i].x, circleArr[i].y, circleArr[j].x, circleArr[j].y, lineOpacity);
+                        
+                    }
             }
         }
 

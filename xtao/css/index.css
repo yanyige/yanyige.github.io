@@ -3,6 +3,11 @@
 	padding: 0;
 }
 
+@font-face { 
+  font-family: FangZheng; 
+  src: url('兰亭黑简.TTF'); 
+} 
+
 .floatL {
 	float: left;
 }
@@ -15,8 +20,8 @@
 }
 
 #main {
-	background: url("../image/background.jpg");
-	height: 6000px;
+	background: url("../image/back.jpg");
+	height: 5500px;
 	background-size: cover;
 	min-width: 1024px;
 	position: relative;
@@ -50,7 +55,7 @@ nav li.active {
 nav li a{
 	text-decoration: none;
 	color: white;
-	font-family: "helvetica neue",arial,sans-serif;
+	font-family: "FangZheng",arial,sans-serif;
     font-size: 18px;
 }
 nav li:hover {
@@ -66,13 +71,20 @@ nav {
 }
 
 .intro {
-	min-height: 1000px;
+	
+}
+.introImg {
+	/*position: absolute;*/
+	vertical-align: middle;
 }
 .headerTitle {
 	width: 30%;
+	left: 0px;
+	right: 0px;
 	margin: 0 auto;
 	display: block;
-	margin-top: 300px;
+	top: 230px;
+	position: absolute;
 }
 
 .headerBall {
@@ -89,7 +101,10 @@ nav {
 }
 
 .data-space {
-	min-height: 700px;
+	min-height: 800px;
+	background-image: url('../image/2.png');
+	background-position: 0 -310px;
+	border-top: 1px solid transparent;
 }
 .data-space .word-content::before{
 	content: url("../image/wordPrefix.png");
@@ -101,7 +116,8 @@ nav {
 	max-width: 720px;
 	margin: 0 auto;
 	position: relative;
-	left: 7%;
+	left: 17%;
+	margin-top: 100px;
 }
 .data-space .word-content h2{
     line-height: 1;
@@ -131,14 +147,12 @@ nav {
 }
 
 .universe {
-	background-image:url('../image/track.png');
-	// background-image: url('../image/track.png'),url('../image/trackBall.png.png')url('../image/trackBall1.png.png'),url('../image/trackBall2.png.png'),url('../image/trackBall3.png.png'),url('../image/trackBall4.png.png');
-	background-size: cover;
-	min-height: 1500px;
+	min-height: 800px;
+	position: relative;
 }
 
 .track {
-	// margin-top: 500px;
+
 }
 .track {
 	margin: 0 auto;
@@ -150,40 +164,14 @@ nav {
 	position: absolute;
 	min-height: 1500px;
 	width: 100%;
-}
-.trackBall {
-	position: absolute;
-	margin-top: -830px;
-	margin-left: 200px;
-}
-.trackBall1 {
-	position: absolute;
-	margin-top: -1030px;
-	margin-left: 350px;
-}
-.trackBall2 {
-	position: absolute;
-	margin-top: -630px;
-	margin-left: 600px;
-}
-.trackBall3 {
-	position: absolute;
-	margin-top: -750px;
-	margin-left: 900px;
-}
-.trackBall4 {
-	position: absolute;
-	margin-top: -800px;
-	margin-left: 1500px;
-}
-.trackBall5 {
-	position: absolute;
-	margin-top: -1030px;
-	margin-left: 1450px;
+	z-index: 2;
 }
 
 .data-analytic {
-	min-height: 700px;
+	min-height: 1300px;
+	position: relative;
+	background-image: url("../image/黑洞.png");
+	background-size: 100%;
 }
 .data-analytic .word-content::before{
 	content: url("../image/wordPrefix.png");
@@ -193,11 +181,12 @@ nav {
 .data-analytic .word-content{
 	color: white;
 	max-width: 720px;
-	margin: 0 auto;
+	margin: 200px auto 0;
 	position: relative;
 	left: -9%;
 }
-.data-analytic .word-content h2{
+
+.word-content h2{
     line-height: 1;
     margin: 0;
     font-family: "Source Sans Pro", sans-serif;
@@ -206,7 +195,7 @@ nav {
     margin-bottom: 25px;
     font-size: 2.1428571429rem;
 }
-.data-analytic .word-content p{
+.word-content p{
     font-family: "Source Sans Pro", sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -220,33 +209,39 @@ nav {
     text-align: justify;
 }
 
-#trackBall {
-	background-image: url("../image/trackBall.png");
+#track {
+	background-image: url("../image/星球.png");
 	background-repeat: no-repeat;
 	background-position: 200px 730px;
+	background-size: 100%;
 }
-#trackBall1 {
-	background-image: url("../image/trackBall1.png");
+
+#half-ball {
+	background-image: url("../image/3.png");
+	position: absolute;
+	min-height: 800px;
+	width: 100%;
+	background-size: 100% 100%;
+	z-index: 1;
 	background-repeat: no-repeat;
-	background-position: 350px 885px;
 }
-#trackBall2 {
-	background-image: url("../image/trackBall2.png");
-	background-repeat: no-repeat;
-	background-position: 600px 920px;
+
+.universe .word-content{
+	color: white;
+    max-width: 720px;
+    margin: 0 auto;
+    position: absolute;
+    left: 37%;
+    margin-top: 200px;
+    z-index: 3;
 }
-#trackBall3 {
-	background-image: url("../image/trackBall3.png");
-	background-repeat: no-repeat;
-	background-position: 950px 870px;
+
+.universe .word-content::before{
+	content: url("../image/wordPrefix.png");
+	position: absolute;
+	margin-left: -100px;
 }
-#trackBall4 {
-	background-image: url("../image/trackBall4.png");
-	background-repeat: no-repeat;
-	background-position: 1500px 730px;
-}
-#trackBall5 {
-	background-image: url("../image/trackBall5.png");
-	background-repeat: no-repeat;
-	background-position: 1450px 530px;
+
+.ground {
+	font-size: 0px;
 }

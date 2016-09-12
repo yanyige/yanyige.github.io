@@ -26,54 +26,48 @@ $(document).ready(function(){
 
 	jQuery.myScroll = function() {
 		$(window).scroll(function(){
-            var scrollTop = (document.body.scrollTop || document.documentElement.scrollTop) + document.documentElement.clientHeight;
-            if(scrollTop > $('.data-space').find('h2').offset().top) {
-            	$('.data-space').find('h2').stop().fadeIn('slow');
-            }else {
-            	$('.data-space').find('h2').stop().fadeOut('fast');
-            }
-            if(scrollTop > $('.data-space').find('p').offset().top) {
-            	$('.data-space').find('p').stop().fadeIn('slow');
-            }else {
-            	$('.data-space').find('p').stop().fadeOut('fast');
-            }
-            if(scrollTop > $('.more').offset().top) {
-            	$('.more').stop().fadeIn('slow');
-            }else {
-            	$('.more').stop().fadeOut('fast');
-            }
-
-
-            if(scrollTop > $('.data-analytic').find('h2').offset().top) {
-            	$('.data-analytic').find('h2').stop().fadeIn('3000');
-            }else {
-            	$('.data-analytic').find('h2').stop().fadeOut('fast');
-            }
-            if(scrollTop > $('.data-analytic').find('p').offset().top) {
-            	$('.data-analytic').find('p').stop().fadeIn('slow');
-            }else {
-            	$('.data-analytic').find('p').stop().fadeOut('fast');
-            }
-            if(scrollTop > $('.more').eq(1).offset().top) {
-            	$('.more').eq(1).stop().fadeIn('slow');
-            }else {
-            	$('.more').eq(1).stop().fadeOut('fast');
-            }
+            display($('.data-space'));
+            display($('.data-analytic'));
+            display($('.universe'));
         });
 	}
 	$.myScroll();
+
+    function display(dom) {
+        var scrollTop = (document.body.scrollTop || document.documentElement.scrollTop) + document.documentElement.clientHeight;
+        if(scrollTop > dom.find('h2').offset().top) {
+            dom.find('h2').stop().fadeIn('slow');
+        }else {
+            dom.find('h2').stop().fadeOut('fast');
+        }
+        if(scrollTop > dom.find('p').offset().top) {
+            dom.find('p').stop().fadeIn('slow');
+        }else {
+            dom.find('p').stop().fadeOut('fast');
+        }
+        if(scrollTop > $('.more').offset().top) {
+            $('.more').stop().fadeIn('slow');
+        }else {
+            $('.more').stop().fadeOut('fast');
+        }
+    }
 
 	jQuery.slideScroll = function() {
 		 $(window).scroll(function(){
             var t1 =  $(".universe").offset().top - $(window).scrollTop();
             t1 = t1 * 0.1;
             var posX = "50%";
-            var posY = t1+"px";
+            var posY = t1+$(".universe").data('top') + "px";
             $(".universe").stop().animate({"background-positionx":posX, "background-position-y":posY}, 3000, 'easeOutQuint');
             Array.prototype.slice.call($(".track-wrapper"), 0).forEach( function(element, index) {
                 posY = t1 + $(element).data('top') + "px";
                 $(element).stop().animate({"background-positionx":posX, "background-position-y":posY}, 3000, 'easeOutQuint');
             });
+            t1 = $(window).scrollTop() - $(".data-analytic").offset().top;
+            posY = t1 * 0.1 + $(".data-analytic").data('top')+ "px";
+            $(".data-analytic").stop().animate({"background-positionx":posX, "background-position-y":posY}, 3000, 'easeOutQuint');
+            console.log("daohang = " + $(window).scrollTop());
+            console.log("div = " + $(".data-analytic").offset().top);
         });
 	}
 	$.slideScroll();
@@ -83,7 +77,7 @@ $(document).ready(function(){
 
 	jQuery.sportsBall = function(){
          //定义画布宽高和生成点的个数
-        var WIDTH = document.documentElement.clientWidth, HEIGHT = 6000, POINT = 35;
+        var WIDTH = document.documentElement.clientWidth, HEIGHT = 5500, POINT = 35;
         
         var canvas = document.getElementById('canvas');
         canvas.width = WIDTH,

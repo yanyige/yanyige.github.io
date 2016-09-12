@@ -21,7 +21,7 @@
 
 #main {
 	background: url("../image/back.jpg");
-	height: 5500px;
+	height: 5200px;
 	background-size: cover;
 	min-width: 1024px;
 	position: relative;
@@ -210,7 +210,7 @@ nav {
 }
 
 #track {
-	background-image: url("../image/星球.png");
+	background-image: url("../image/组1.png");
 	background-repeat: no-repeat;
 	background-position: 200px 730px;
 	background-size: 100%;

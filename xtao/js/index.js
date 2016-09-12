@@ -3,7 +3,6 @@ $(document).ready(function(){
 	jQuery.header = function() {
 		$(".nav ul li").hover(function(){
 			$(this).addClass('active');
-			console.log('a');
 		}, function(){
 			$(this).removeClass('active');
 		});
@@ -66,8 +65,6 @@ $(document).ready(function(){
             t1 = $(window).scrollTop() - $(".data-analytic").offset().top;
             posY = t1 * 0.1 + $(".data-analytic").data('top')+ "px";
             $(".data-analytic").stop().animate({"background-positionx":posX, "background-position-y":posY}, 3000, 'easeOutQuint');
-            console.log("daohang = " + $(window).scrollTop());
-            console.log("div = " + $(".data-analytic").offset().top);
         });
 	}
 	$.slideScroll();
@@ -77,7 +74,7 @@ $(document).ready(function(){
 
 	jQuery.sportsBall = function(){
          //定义画布宽高和生成点的个数
-        var WIDTH = document.documentElement.clientWidth, HEIGHT = 5500, POINT = 35;
+        var WIDTH = document.documentElement.clientWidth, HEIGHT = 5200, POINT = 35;
         
         var canvas = document.getElementById('canvas');
         canvas.width = WIDTH,

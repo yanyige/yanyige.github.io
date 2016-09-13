@@ -18,7 +18,8 @@ $(document).ready(function(){
 	            var posX = pageX * 0.009;
 	            var posY = pageY * 0.009;
 	            var ret = 'translate3D(' + posX + 'px, ' + posY + 'px, 0px)';
-	            $('.ball').css('transform', ret);
+                $('.ball').css('transform', ret);
+	            $('.cloud').css('transform', ret);
 	    });
 	}
 	$.ballsMove();

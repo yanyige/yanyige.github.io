@@ -216,14 +216,17 @@ nav {
 	background-size: 100%;
 }
 
-#half-ball {
-	background-image: url("../image/3.png");
+/*#half-ball {
+	background-image: url("../image/球.png");
 	position: absolute;
 	min-height: 800px;
 	width: 100%;
-	background-size: 100% 100%;
+	background-size: cover;
 	z-index: 1;
 	background-repeat: no-repeat;
+}*/
+#half-ball {
+	position: absolute;
 }
 
 .universe .word-content{
@@ -244,4 +247,14 @@ nav {
 
 .ground {
 	font-size: 0px;
+	/*position: relative;*/
+}
+
+.icon-bot {
+	margin-top: 100px;
+	width: 20%;
+	left: 0;
+	right: 0;
+	margin: 210px auto 0;
+	position: absolute;
 }

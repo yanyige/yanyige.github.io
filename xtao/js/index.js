@@ -113,14 +113,14 @@ $(document).ready(function(){
         // 绘制原点
         function drawCricle (cxt, x, y, r, moveX, moveY) {
             var img = new Image();
-            img.src = "image/icon.png"
+            img.src = "image/icon-1.png"
             var circle = new Circle(x, y, r, moveX, moveY)
             cxt.beginPath()
             // context.fillStyle = 'rgba(36,240,255,0.3)';
             // cxt.arc(circle.x, circle.y, circle.r, 0, 2*Math.PI)
             // cxt.closePath()
             // cxt.fill();
-            cxt.drawImage(img, x, y, r* 10, r*5);
+            cxt.drawImage(img, x-r*2.5, y-r*2.5, r* 5, r*5);
             return circle;
         }
         //绘制线条

@@ -34,7 +34,7 @@ $(document).ready(function(){
 
     function display(dom) {
         var scrollTop = (document.body.scrollTop || document.documentElement.scrollTop) + document.documentElement.clientHeight;
-        if(scrollTop > dom.find('h2').offset().top) {
+        if(scrollTop > dom.find('h2').offset().top + 100) {
             dom.find('h2').stop().fadeIn('slow');
         }else {
             dom.find('h2').stop().fadeOut('fast');
@@ -65,6 +65,9 @@ $(document).ready(function(){
             t1 = $(window).scrollTop() - $(".data-analytic").offset().top;
             posY = t1 * 0.1 + $(".data-analytic").data('top')+ "px";
             $(".data-analytic").stop().animate({"background-positionx":posX, "background-position-y":posY}, 3000, 'easeOutQuint');
+            t1 = $(".data-space").offset().top - $(window).scrollTop() -400;
+            posY = t1 * 0.05 + "px";
+            $(".data-space").stop().animate({"background-positionx":posX, "background-position-y":posY}, 3000, 'easeOutQuint');
         });
 	}
 	$.slideScroll();
@@ -74,7 +77,7 @@ $(document).ready(function(){
 
 	jQuery.sportsBall = function(){
          //定义画布宽高和生成点的个数
-        var WIDTH = document.documentElement.clientWidth, HEIGHT = 5200, POINT = 35;
+        var WIDTH = document.documentElement.clientWidth, HEIGHT = 6000, POINT = 35;
         
         var canvas = document.getElementById('canvas');
         canvas.width = WIDTH,
@@ -108,12 +111,15 @@ $(document).ready(function(){
         }
         // 绘制原点
         function drawCricle (cxt, x, y, r, moveX, moveY) {
+            var img = new Image();
+            img.src = "image/icon.png"
             var circle = new Circle(x, y, r, moveX, moveY)
             cxt.beginPath()
-            context.fillStyle = 'rgba(36,240,255,0.3)';
-            cxt.arc(circle.x, circle.y, circle.r, 0, 2*Math.PI)
-            cxt.closePath()
-            cxt.fill();
+            // context.fillStyle = 'rgba(36,240,255,0.3)';
+            // cxt.arc(circle.x, circle.y, circle.r, 0, 2*Math.PI)
+            // cxt.closePath()
+            // cxt.fill();
+            cxt.drawImage(img, x, y, r* 10, r*5);
             return circle;
         }
         //绘制线条

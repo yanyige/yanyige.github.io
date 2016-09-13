@@ -21,7 +21,7 @@
 
 #main {
 	background: url("../image/back.jpg");
-	height: 5200px;
+	height: 6000px;
 	background-size: cover;
 	min-width: 1024px;
 	position: relative;
@@ -89,22 +89,37 @@ nav {
 
 .headerBall {
 	position: absolute;
-	width: 32%;
-	margin-top: 30px;
+	// width: 32%;
+	margin-top: -380px;
 }
 
 .headerBall2 {
 	position: absolute;
-	width: 22%;
-	margin-top: -200px;
-	right: -300px;
+	// width: 22%;
+	margin-top: -540px;
+	right: 0px;
+}
+
+.headerBall3 {
+	position: absolute;
+	// width: 22%;
+	margin-top: -240px;
+	left: 46%;
+}
+
+.spark {
+	// position: absolute;
+	margin-top: -100px;
 }
 
 .data-space {
-	min-height: 800px;
-	background-image: url('../image/2.png');
-	background-position: 0 -310px;
+	min-height: 1300px;
+	// overflow: hidden;
+	background-image: url('../image/图2球3-1.png');
+	background-repeat: no-repeat;
+	background-position: right;
 	border-top: 1px solid transparent;
+	position: relative;
 }
 .data-space .word-content::before{
 	content: url("../image/wordPrefix.png");
@@ -115,9 +130,10 @@ nav {
 	color: white;
 	max-width: 720px;
 	margin: 0 auto;
-	position: relative;
-	left: 17%;
-	margin-top: 100px;
+	position: absolute;
+	left: 50%;
+	top: 300px;
+
 }
 .data-space .word-content h2{
     line-height: 1;
@@ -140,6 +156,13 @@ nav {
     -moz-osx-font-smoothing: grayscale;
     -webkit-backface-visibility: hidden;
     text-align: justify;
+}
+
+.cloud {
+	position: absolute;
+	left: -180px;
+	margin-top: -210px;
+	z-index: 10;
 }
 
 .more {
@@ -172,6 +195,7 @@ nav {
 	position: relative;
 	background-image: url("../image/黑洞.png");
 	background-size: 100%;
+	background-repeat: no-repeat;
 }
 .data-analytic .word-content::before{
 	content: url("../image/wordPrefix.png");
@@ -181,7 +205,7 @@ nav {
 .data-analytic .word-content{
 	color: white;
 	max-width: 720px;
-	margin: 200px auto 0;
+	margin: 500px auto 0;
 	position: relative;
 	left: -9%;
 }
@@ -216,17 +240,14 @@ nav {
 	background-size: 100%;
 }
 
-/*#half-ball {
-	background-image: url("../image/球.png");
-	position: absolute;
-	min-height: 800px;
-	width: 100%;
-	background-size: cover;
-	z-index: 1;
-	background-repeat: no-repeat;
-}*/
 #half-ball {
+	// background-image: url("../image/3.png");
 	position: absolute;
+	// min-height: 800px;
+	// width: 100%;
+	// background-size: 100% 100%;
+	// z-index: 1;
+	// background-repeat: no-repeat;
 }
 
 .universe .word-content{
@@ -247,14 +268,13 @@ nav {
 
 .ground {
 	font-size: 0px;
-	/*position: relative;*/
+	position: absolute;
 }
 
-.icon-bot {
-	margin-top: 100px;
-	width: 20%;
+.logo-bot {
+	width: 50%;
 	left: 0;
 	right: 0;
-	margin: 210px auto 0;
+	margin: -100px auto 0;
 	position: absolute;
 }

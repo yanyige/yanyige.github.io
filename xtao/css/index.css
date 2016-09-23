@@ -30,6 +30,7 @@
 
 
 .nav-wrapper {
+	position: relative;
 	max-width: 1600px;
 	margin: 0 auto;
 }
@@ -277,4 +278,59 @@ nav {
 	right: 0;
 	margin: -100px auto 0;
 	position: absolute;
+}
+
+.menu-icon {
+	width: 40px;
+	position: absolute;
+	top: 42px;
+	right: -40px;
+	z-index: 8;
+	cursor: pointer;
+}
+
+.menu-icon span {
+	height: 3px;
+	background-color: white;
+	display: block;
+}
+
+.sub-nav {
+	width: 500px;
+	background-color: black;
+	height: 100%;
+	position: fixed;
+	z-index: 7;
+	top: 0;
+	right: -300px;
+    color: #ababab;
+    display: none;
+    overflow-x: hidden;
+}
+
+.sub-nav-contain {
+	margin-top: 120px;
+}
+
+.sub-nav ul {
+	list-style: none;
+	padding: 0 0 20px 0;
+}
+
+.sub-nav li:first-child {
+    color: #ababab;
+    font-size: 20px;
+    font-family: "FangZheng",arial,sans-serif;
+}
+
+.sub-nav li {
+	margin: 16px;
+}
+
+.body-nav {
+	overflow: hidden;
+}
+
+body {
+	overflow: visible;
 }

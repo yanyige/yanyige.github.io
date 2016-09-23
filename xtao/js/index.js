@@ -73,9 +73,6 @@ $(document).ready(function(){
 	}
 	$.slideScroll();
 
-
-
-
 	jQuery.sportsBall = function(){
          //定义画布宽高和生成点的个数
         var WIDTH = document.documentElement.clientWidth, HEIGHT = 6000, POINT = 35;
@@ -190,5 +187,40 @@ $(document).ready(function(){
         }, 16);
     }
     $.sportsBall();
+
+    jQuery.toggleNav = function() {
+
+        $('.menu-icon').click(function() {
+            $("body").toggleClass('body-nav');
+            if($(".sub-nav").is(':visible')) {
+                $("nav ul").fadeIn(1000);
+                $(".sub-nav").stop().animate({
+                    right: "-500px"
+                }, 1000, function() {
+                    $(".sub-nav").css({"display":"none"});
+                });
+                $(".menu-icon").stop().animate({
+                    right: "-40"
+                }, 1000, function() {
+                });
+
+            }else {
+                $("nav ul").fadeOut(1000);
+                $(".sub-nav").css({"display":"block"});
+                $(".sub-nav").stop().animate({
+                    right: "0"
+                }, 1000, function() {
+                });
+                $(".menu-icon").stop().animate({
+                    right: "260"
+                }, 1000, function() {
+                });
+            }
+
+        });
+    }
+    $.toggleNav();
+
+
 
 });

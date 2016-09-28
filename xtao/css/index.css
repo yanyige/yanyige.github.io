@@ -1,22 +1,9 @@
-* {
-	margin: 0;
-	padding: 0;
+nav {
+	margin-top: 20px;
 }
-
-@font-face { 
-  font-family: FangZheng; 
-  src: url('兰亭黑简.TTF'); 
-} 
 
 .floatL {
 	float: left;
-}
-
-
-.clearfix::after {
-	content: "";
-	display: table;
-	clear: both;
 }
 
 #main {
@@ -26,49 +13,6 @@
 	min-width: 1024px;
 	position: relative;
 	overflow: hidden;
-}
-
-
-.nav-wrapper {
-	position: relative;
-	max-width: 1600px;
-	margin: 0 auto;
-}
-
-nav {
-	margin-top: 20px;
-}
-
-nav ul {
-	float: right;
-}
-nav li {
-	display: inline-block;
-	height: 64px;
-	line-height: 64px;
-	margin-top: 20px;
-	margin-right: 30px;
-	text-align: center;
-}
-nav li.active {
-	border-bottom: 1px solid white;
-}
-nav li a{
-	text-decoration: none;
-	color: white;
-	font-family: "FangZheng",arial,sans-serif;
-    font-size: 18px;
-}
-nav li:hover {
-	cursor: pointer;
-
-}
-
-nav {
-	position: fixed;
-	left: 0;
-	right: 0;
-	z-index: 9999;
 }
 
 .intro {
@@ -280,57 +224,3 @@ nav {
 	position: absolute;
 }
 
-.menu-icon {
-	width: 40px;
-	position: absolute;
-	top: 42px;
-	right: -40px;
-	z-index: 8;
-	cursor: pointer;
-}
-
-.menu-icon span {
-	height: 3px;
-	background-color: white;
-	display: block;
-}
-
-.sub-nav {
-	width: 500px;
-	background-color: black;
-	height: 100%;
-	position: fixed;
-	z-index: 7;
-	top: 0;
-	right: -300px;
-    color: #ababab;
-    display: none;
-    overflow-x: hidden;
-}
-
-.sub-nav-contain {
-	margin-top: 120px;
-}
-
-.sub-nav ul {
-	list-style: none;
-	padding: 0 0 20px 0;
-}
-
-.sub-nav li:first-child {
-    color: #ababab;
-    font-size: 20px;
-    font-family: "FangZheng",arial,sans-serif;
-}
-
-.sub-nav li {
-	margin: 16px;
-}
-
-.body-nav {
-	overflow: hidden;
-}
-
-body {
-	overflow: visible;
-}

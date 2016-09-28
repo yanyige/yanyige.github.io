@@ -1,0 +1,40 @@
+.news-wrapper {
+	width: 1000px;
+	margin: 100px auto;
+}
+
+.news-block {
+	font-family: Microsoft YaHei;
+	position: relative;
+}
+
+.news-block img{
+	float: left;
+}
+
+.news-container {
+	float: left;
+	width: calc(100% - 450px);
+	margin: 0px 0 25px 50px;
+}
+
+.news-info {
+	color: #4a79bb;
+	margin: 25px 0 20px 0;
+}
+
+.more-btn {
+	border: 1px solid #4a79bb;
+	height: 28px;
+	width: 200px;
+	position: absolute;
+	top: 190px;
+	border-radius: 200px 200px 200px 200px;
+	color: #4a79bb;
+	text-align: center;
+	line-height: 28px;
+}
+
+.news-block:nth-child(n + 2) {
+	margin-top: 100px;
+}

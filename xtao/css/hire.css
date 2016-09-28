@@ -1,0 +1,61 @@
+.wrapper {
+	width: 1000px;
+	font-family: Microsoft YaHei;
+	margin: 100px auto;
+}
+
+.wrapper .block {
+	height: 45px;
+	width: 48%;
+	display: inline-block;
+	background-color: #f5f6f7;
+	margin: 20px 0;
+}
+
+.wrapper .block:hover {
+	cursor: pointer;
+}
+
+.wrapper img {
+	position: relative;
+	top: 17px;
+	left: 20px;
+	float: left;
+}
+
+.wrapper p {
+	position: relative;
+	line-height: 45px;
+	float: left;
+	left: 40px;
+	font-size: 20px;
+}
+
+.wrapper .block:nth-child(even) {
+	float: right;
+}
+
+.support {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	font-family: Microsoft YaHei;
+}
+
+.support>p {
+	margin: 10px 0;
+	font-size: 20px;
+	color: #aaa;
+}
+
+.support-btn {
+	border: 1px solid #4a79bb;
+	height: 28px;
+	width: 200px;
+	border-radius: 200px 200px 200px 200px;
+	color: #4a79bb;
+	text-align: center;
+	line-height: 28px;
+	margin: 20px auto;
+}
+

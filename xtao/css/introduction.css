@@ -1,0 +1,57 @@
+.tab {
+	height: 60px;
+	background-color: #2f2f2f;
+}
+
+.tab-container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.tab-link {
+	display: inline-block;
+	width: 33.3%;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+	font-family: Microsoft YaHei;
+	color: white;
+}
+
+.tab-link:hover {
+	cursor: pointer;
+}
+
+.tab-link.active {
+	background-color: #427dd1;
+}
+
+.tab-main {
+	text-align: center;
+}
+
+.tab-main .block{
+	display: inline-block;
+	width: 33.3%;
+}
+
+.tab-main img{
+	// width: 100%;
+	margin-top: 100px;
+}
+
+.tab-main h2 {
+	font-family: Microsoft YaHei;
+	width: 80%;
+	margin: 10px auto;
+}
+
+.tab-main p {
+	font-family: Microsoft YaHei;
+	width: 80%;
+	margin: 10px auto;
+}
+
+.XClass, .CClass {
+	display: none;
+}

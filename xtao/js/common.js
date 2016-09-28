@@ -39,5 +39,17 @@ $(document).ready(function(){
         });
     }
     $.toggleNav();
-    
+
+    jQuery.navOpacity = function() {
+        $(window).scroll(function(){
+            var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
+            var targetHeight = $('.header').find('img').height();
+            var opacity = (1 - (targetHeight - scrollHeight) / targetHeight);
+            var nav = $('.nav');
+            nav.css('background-color', 'rgba(0, 0, 0, '+opacity+')');
+        });
+    }
+    $.navOpacity();
+
+
 });

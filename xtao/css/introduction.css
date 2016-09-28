@@ -1,6 +1,18 @@
 .tab {
-	height: 60px;
+	padding: 0 0 40px 0;
+}
+
+.tab .tab-background {
 	background-color: #2f2f2f;
+	height: 60px;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+.tab .tab-header {
+	background-color: #2f2f2f;
+	height: 60px;
 }
 
 .tab-container {

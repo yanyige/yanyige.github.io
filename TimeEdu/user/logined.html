@@ -1,0 +1,57 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="公务员录用电子化考试系统">
+    <link rel="stylesheet" type="text/css" href="css/message.css">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <title>公务员录用电子化考试系统</title>
+</head>
+<body>
+	<!--
+	<p class="tit" style="margin-bottom:-30px;">公务员录用电子化考试系统</p>
+    <p class="tit">XXXX年度公安机关面向公安院校公安专业毕业生考试录用公务员</p>
+	-->
+	<p class="tit">公务员录用电子化考试系统</p>
+    <p class="comput">机位号：<label>11</label></p>
+    <div class="content">
+        <div class="login">
+            <div class="opac"></div>
+            <div class="login_in">
+                <p class="tip">
+                    温馨提示：请仔细核对个人信息，如有错误请报告老师！
+                </p>
+                <div class="mess">
+                    <img src="images/tou.png" width="95" height="126">
+                    <div>
+                        <p><label>准考证号：</label><span>111111111111</span></p>
+                        <p><label>姓名：</label><span>XXX</span></p>
+                        <p><label>性别：</label><span>X</span></p>
+                        <!--<p><label>考试科目：</label><span>行政职业能力测试</span></p>-->
+						<p><label>考试科目：</label><span>行政职业能力测验</span></p>
+                        <p><label>证件号码：</label><span>111111111111111111</span></p>
+                        <p><label>座位号：</label><span>11</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="btn">
+        <input type="button" value="确认登录" class="sub" id="mybtn">
+        <input type="button" value="返回" id="back_btn">
+    </div>
+
+<script type="text/javascript">
+    $('#mybtn').click(function(){
+        window.location.href="guide.html";
+    });
+    $('#back_btn').click(function(){
+        window.location.href="login.html";
+    });
+    if(localStorage.getItem('login') !== 'true') {
+        alert("请先输入密码再访问本页面！");
+
+        $(window).unbind('beforeunload');
+        window.location.href = '../index.html';
+    }
+</script>
+</body></html>

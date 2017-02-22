@@ -1,0 +1,82 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="公务员录用电子化考试系统">
+    <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="stylesheet" type="text/css" href="css/public.css">
+        <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <title>公务员录用电子化考试系统</title>
+</head>
+<body>
+	<!--
+	<p class="tit" style="margin-bottom:-30px;">公务员录用电子化考试系统</p>
+    <p class="tit">XXXX年度公安机关面向公安院校公安专业毕业生考试录用公务员</p>
+	-->
+	<p class="tit">公务员录用电子化考试系统</p>
+    <p class="comput">机位号：<label>11</label></p>
+    <div class="content">
+        <div class="login">
+            <div class="opac"></div>
+            <div class="login_in">
+                <h4>考生登录<label>LOGIN</label></h4>
+                <div><label>准考证号：</label><input type="text" class="user" value=""></div>
+                <div><label>证件号码：</label><input type="text" class="num" value=""></div>
+                <p class="error"></p>
+                <div class="btn">
+                    <input type="button" value="登录" class="sub">
+                    <input type="button" value="重置" class="set">
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="tip">提示：准考证号为：<label id="one">111111111111</label>，证件号码为：<label id="two">111111111111111111</label></p>
+
+<script type="text/javascript">
+    $(function(){
+        $(".user").keydown(function(event) {
+             var txt=$(this).val();
+             if(txt.length>=12){
+                $(this).val($(this).val().substring(0,11));
+             }
+        });
+        $(".num").keydown(function(event) {
+             if($(this).val().length>=18){
+                $(this).val($(this).val().substring(0,17));
+             }
+        });
+
+        $(document).on("click",".set",function(){
+            $(".user").val("");
+            $(".num").val("");
+        });
+        $(document).on("click",".sub",function(){
+            $(".error").show();
+            var account=$(".user").val();
+            var pass=$(".num").val();
+            if(account=="" || pass==""){
+                $('.error').html('请输入准考证号和证件号');
+                $(".error").css('visibility', 'visible');
+                return false;
+            }
+            if(account!=$("#one").text()){
+                 $('.error').html('准考证号不正确');
+                 $(".error").css('visibility', 'visible');
+                 return false;
+            }
+            if(pass!=$("#two").text()){
+                 $('.error').html('证件号码不正确');
+                 $(".error").css('visibility', 'visible');
+                 return false;
+            }
+            location.href="logined.html";
+        });
+    });
+    if(localStorage.getItem('login') !== 'true') {
+        alert("请先输入密码再访问本页面！");
+
+        $(window).unbind('beforeunload');
+        window.location.href = '../index.html';
+    }
+
+</script>
+</body></html>

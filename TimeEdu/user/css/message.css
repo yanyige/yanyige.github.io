@@ -1,0 +1,17 @@
+.tit{color:#1d82d4;font-weight: bold;font-size:24px; text-align: center; line-height: 90px;}
+.comput{font-size:48px; line-height:60px;color:#1f83d2; font-weight: bold;text-align:center;}
+.comput label{color:#e7661a;}
+.content{width:700px; margin:0 auto;overflow:hidden; background:url(../images/bei2.png) no-repeat;}
+.login{width:420px; height:270px;margin:60px auto 0;border-radius:4px;padding:10px;position:relative;}
+.opac{opacity: 0.9;width:440px; height:270px; background:#1d82d4;filter:Alpha(opacity=90);position:absolute; left:0;right:0;top:0;bottom:0;}
+.login_in{padding:10px;height:230px;background:#ffffff;border-radius:4px;opacity:1;z-index: 999;position:relative;_margin-top: 10px;}
+.tip{padding-left:28px; background:url(../images/deng.png) 0 center no-repeat;color:#ff7700;font-size:14px;text-align:center;line-height:30px;}
+.mess{overflow:hidden; margin-top: 10px;}
+.mess img{display:inline;float:left;margin-top: 14px;}
+.mess div{margin-left:25px;float:left;width:270px;}
+.mess div label{left:0px;_left:-90px; display:inline-block; color:#006ec8;font-size:14px;position:absolute;}
+.mess div span{font-size:14px; color:#006ec8;}
+.mess p{line-height:25px;min-height:26px;font-family: "瀹嬩綋";font-weight:bold;position:relative;padding-left:90px;}
+.btn{text-align: center;}
+.btn input{width:130px;height:30px; font-size:14px;background:#e8661a;border:none;color:#fff;}
+.btn .sub{background:#1f83d1;margin-right:20px;}

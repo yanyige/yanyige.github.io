@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时代教育-公务员录用电子化考试系统</title>
+	<script type="text/javascript" src='../js/jquery-3.1.1.min.js'></script>
+	<script type="text/javascript" src='../js/jquery.cookie.js'></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+</head>
+<body>
+	<div id="main" class="clearfix">
+		<header>
+			<div class="person">
+				<a href="javascript:;">张三</a>
+				<label>200961542063</label>
+			</div>
+			<div class="head-title">
+				<p>时代教育-公务员录用电子化考试</p>
+				<p>行政职业能力测验</p>
+			</div>
+			<div style="width: 400px; float: right; height: 80px;">
+                <input type="button" value="交卷" class="sub" id="handin_btn">
+                <span class="compute">机&nbsp;位&nbsp;号：11</span>
+                <span class="timer" style="line-height:30px;">剩余时间：
+                    <label class="hour">1</label>:
+                    <label class="minute">59</label>:
+                    <label class="second">49</label>
+                </span>
+            </div>
+		</header>
+		<article class="">
+			<div class="title-intro" style="margin-left: 280px;"></div>
+			<div class="problem subject">
+				<div class='problem-content'>
+					欢迎进入本考试系统
+				</div>
+				<ul>
+	                <li><input id="a" name='opt' class="answer_input" type="radio" value="a"><label for='a'><span style="float:left;">A. </span></label></li>
+	                <li><input id="b" name='opt' class="answer_input" type="radio" value="b"><label for='b'><span style="float:left;">B. </span></label></li>
+	                <li><input id="c" name='opt' class="answer_input" type="radio" value="c"><label for='c'><span style="float:left;">C. </span></label></li>
+	                <li><input id="d" name='opt' class="answer_input" type="radio" value="d"><label for='d'><span style="float:left;">D. </span></label></li>
+	            </ul>
+	            <div id = "welcome">
+                        <p class="tipTit">请选择一个部分进入作答！</p>
+                        <table>
+                            <tbody><tr>
+                                <th><span>序号</span></th>
+                                <th><span>部分</span></th>
+                                <th><span>题数</span></th>
+                                <th><span>作答时限</span></th>
+                            </tr>
+                            <tr class="change_part" id="list_part_1" pid="1" data-type="changshi">
+                                <td>1</td>
+                                <td><a href="javascript:;" class="partC">第一部分 常识判断</a></td>
+                                <td>5</td>
+                                <td>15分钟</td>
+                                <td></td>
+                            </tr>
+                            <tr class="change_part" id="list_part_2" pid="2" data-type="panduan">
+                                <td>2</td>
+                                <td><a href="javascript:;" class="partC">第二部分 判断推理</a></td>
+                                <td>10</td>
+                                <td>35分钟</td>
+                                <td></td>
+                            </tr>
+                            <tr class="change_part" id="list_part_3" pid="3" data-type="shuliang">
+                                <td>3</td>
+                                <td><a href="javascript:;" class="partC">第三部分 数量关系</a></td>
+                                <td>5</td>
+                                <td>15分钟</td>
+                                <td></td>
+                            </tr>
+                            <tr class="change_part" id="list_part_4" pid="4" data-type="yanyu">
+                                <td>4</td>
+                                <td><a href="javascript:;" class="partC">第四部分 言语理解与表达</a></td>
+                                <td>10</td>
+                                <td>35分钟</td>
+                                <td></td>
+                            </tr>
+                            <tr class="change_part" id="list_part_5" pid="5" data-type="ziliao">
+                                <td>5</td>
+                                <td><a href="javascript:;" class="partC">第五部分 资料分析</a></td>
+                                <td>5</td>
+                                <td>20分钟</td>
+                                <td></td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+	            <div class="btn option clearfix">
+					<span><input type="button" value="下一题（F5）" class="next current"></span>
+					<span><input type="button" value="上一题（F4）" class="up"></span>
+					<span><input type="button" value="标记" class="key"></span>
+	            </div>
+            </div>
+		</article>
+		<nav>
+			<div class="pro-block clearfix changshi" data-type="changshi">
+				<div class="block-title">
+					<p>第X部分——常识判断</p>
+				</div>
+				<div class="pro-wrapper clearfix">
+<!-- 					<div class='no'>1</div>
+					<div class='no'>2</div>
+					<div class='no'>3</div>
+					<div class='no'>4</div>
+					<div class='no'>5</div> -->
+				</div>
+			</div>
+			<div class="pro-block clearfix panduan" data-type="panduan">
+				<div class="block-title">
+					<p>第X部分——常识判断</p>
+				</div>
+				<div class="pro-wrapper clearfix">
+<!-- 					<div class='no'>1</div>
+					<div class='no'>2</div>
+					<div class='no'>3</div>
+					<div class='no'>4</div>
+					<div class='no'>5</div> -->
+				</div>
+			</div>
+			<div class="pro-block clearfix shuliang" data-type="shuliang">
+				<div class="block-title">
+					<p>第X部分——常识判断</p>
+				</div>
+				<div class="pro-wrapper clearfix">
+<!-- 					<div class='no'>1</div>
+					<div class='no'>2</div>
+					<div class='no'>3</div>
+					<div class='no'>4</div>
+					<div class='no'>5</div> -->
+				</div>
+			</div>
+			<div class="pro-block clearfix yanyu" data-type="yanyu">
+				<div class="block-title">
+					<p>第X部分——常识判断</p>
+				</div>
+				<div class="pro-wrapper clearfix">
+<!-- 					<div class='no'>1</div>
+					<div class='no'>2</div>
+					<div class='no'>3</div>
+					<div class='no'>4</div>
+					<div class='no'>5</div> -->
+				</div>
+			</div>
+			<div class="pro-block clearfix ziliao" data-type="ziliao">
+				<div class="block-title">
+					<p>第X部分——常识判断</p>
+				</div>
+				<div class="pro-wrapper clearfix">
+<!-- 					<div class='no'>1</div>
+					<div class='no'>2</div>
+					<div class='no'>3</div>
+					<div class='no'>4</div>
+					<div class='no'>5</div> -->
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div class="result"><div class="lookResult">查看结果</div></div>
+</body>
+	<script type="text/javascript" src='../js/echarts.min.js'></script>
+	<script type="text/javascript" src='../js/main.js'></script>
+	<script type="text/javascript" src='../js/changshi.js'></script>
+	<script type="text/javascript" src='../js/panduan.js'></script>
+	<script type="text/javascript" src='../js/shuliang.js'></script>
+	<script type="text/javascript" src='../js/ziliao.js'></script>
+	<script type="text/javascript" src='../js/yanyu.js'></script>
+</html>

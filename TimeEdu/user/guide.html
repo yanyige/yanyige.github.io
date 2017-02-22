@@ -1,0 +1,224 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="公务员录用电子化考试系统">
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/guide.css">
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <title>公务员录用电子化考试系统</title>
+</head>
+<body>
+    <div class="main">
+        <div class="header PersonMess">
+            <div class="top">
+                <ul>
+                    <li><img src="images/tou.png" width="93" height="124"> </li>
+                    <li>
+                        <p>姓名：XXX</p>
+                        <p>性别：X</p>
+                        <p>准考证号：111111111111</p>
+                        <p>证件号码：111111111111111111</p>
+                        <p>机位号：11</p>
+                    </li>
+                    <li>
+                        <p>考试类型：正常考试</p>
+                        <p>考试时间：120分钟</p>
+                        <p class="ok" style="padding-right:0;">试卷加载：已加载，正在倒计时</p>
+                    </li>
+                    <li class="four">
+                        <input type="button" value="倒计时：0:00:10" class="action" id="mybtn" style="display: none;">
+                        <div class="bar"><p></p><label class="num">1%</label></div>
+                        <span class="jzed">正在进行加载，已经完成<label class="num"></label></span>
+                    </li>
+                </ul>
+            </div>
+			<h3>公务员录用电子化考试</h3>
+            <!--<h3>XXXX年度公安机关面向公安院校公安专业毕业生考试录用公务员</h3>-->
+        </div>
+        <div class="down">
+            <ul class="change">
+			<!--
+                <li class="current"><a href="javascript:;">考生须知</a></li>
+                <li class="two"><a href="javascript:;">考场规则</a></li>
+				-->
+                <li class="current"><a href="javascript:;">操作指南</a></li>
+            </ul>
+            <div class="content" style="height: 94px;">
+			<!--
+                <div class="know">
+                    <p>一、本次考试行政职业能力测验实行电子化考试，使用计算机作答，申论和公安专业科目实行纸笔化考试。</p>
+                    <p>二、行政职业能力测验科目实行每部分分别计时的考试方式，考试系统提供两个计时：总考试时间计时和各部分考试时间计时。</p>
+                    <p>三、考生在考试开始前按照提示登陆考试系统，考试开始后，系统自动开始计时。行政职业能力测验由若干部分试题内容组成，各部分作答单独计时。考生须在指定时限内完成相应部分的答题，超过时限的，系统自动提交该部分试题，提交后的试题不能再查看或修改；考生在指定时限内自行提交的，该部分剩余的答题时间不累积到其他部分；交卷由考试系统自动完成。</p>
+                    <p>四、考试开始30分钟后一律禁止入场，不允许提前交卷、退场。</p>
+                    <p>五、在考试开始前30分钟，凭准考证和身份证进入考场，对号入座。</p>
+                    <p>六、除规定可携带的文具以外，严禁将各种电子、通信、计算、存储或其它设备带至座位。</p>
+                    <p>七、在电子化考试过程中，如出现无法登录、信息有误、系统故障、停电等异常情况，应举手示意，请监考人员解决，不得自行处置。在异常情况处理期间，考生应在座位上安静等待，听从监考人员和系统管理员的指引。根据处置时间，会给考生相应地延长考试时间。</p>
+                    <p>八、违纪违规行为按照《公务员考试录用违纪违规行为处理办法》中有关规定处理。</p>
+                    <p>九．建议考生提前一天熟悉准考证上指定的考试地点，确认考点的具体位置和乘车路线。在考试当天请预留足够的时间并尽量选择公共交通工具前往所在考点，避免影响正常考试。</p>
+                </div>
+                <div class="rule">
+                一、考生在考试前30分钟凭准考证和本人有效身份证原件进入本科目考试所指定考场，按座位号入座。将准考证和身份证明原件放置在座位右上角，以便核对。<br />
+二、严禁携带规定以外的物品进入考场。<br />
+三、考试总体时间及试卷各部分作答时间以考试系统计时器为准。考试开始30分钟后一律禁止入场,考试结束前禁止离场。<br />
+四、考生应按考试系统要求或提示进行操作，不得擅自对计算机进行冷、热启动、关闭电源及其他与考试无关的操作。<br />
+五、考生在考场内须保持安静，不得要求监考人员解释试题，发生异常情况时可举手询问。<br />
+六、考生应尊重考试工作人员，自觉接受监督和检查，服从安排。<br />
+七、考生不得将相关考试信息以任何方式带出考场，交卷后不得在考场附近逗留、谈论。<br />
+八、考生若有违纪违规行为，将按照《公务员考试录用违纪违规行为处理办法》中有关规定处理。
+</div>
+-->
+                <!-- 指南 -->
+                <div class="guide" style="display: block;">
+                    <h6>一、系统登录</h6>
+                    <p class="er">（一）确认机位号</p>
+                    <p>考生进入考场落座前，请确认机位号是否正确——机位号与准考证号后两位必须相同。</p>
+                    <img src="images/1.png">
+                    <p class="er">（二） 登录</p>
+                    <p>在监考老师发布登录命令后，程序将自动进入登录界面。请考生根据提示输入准考证号和证件号码，点“登录”按钮进入登录确认界面。当机位号与准考证号后两位不相同时，将无法登录。</p>
+                    <img src="images/2.png">
+                    <p class="er">（三） 确认登录</p>
+                    <p>展示考生信息以供确认，考生确认后进入等待开考界面。</p>
+                    <h6>二、等待开考</h6>
+                    <p>等待开考界面是考试前的一个提示界面，请考生利用考前等待时间认真阅读考试重要提示。点“考生须知”进入考生须知具体说明，点“考场规则”进入考场规则具体说明，点“操作指南”进入操作步骤具体说明。</p>
+                    <img src="images/3.png">
+                    <p>点“我已阅读”按钮，系统开始开考倒计时；考试时间到达后，系统将自动进入考生作答界面。</p>
+                    <h6>三、作答界面</h6>
+                    <p>作答界面上方为标题栏，左下方为答题卡，右下方为试题区。</p>
+                    <img src="images/4.png">
+                    <p style="color:red; font-weight:bold;font-style: italic; text-align: center; font-size: 14px;">注：此图仅为示意，其中的内容和正考的实际内容，存在差异！</p>
+                    <p class="er">（一）标题栏</p>
+                    <p>标题栏从左到右，依次显示考生基本信息、本场考试科目名称、机位号、考试剩余时间、”交卷“按钮。</p>
+                    <p class="er">（二）试题卡</p>
+                    <p>试题分多个部分，题号按顺序编号。题号的背景色含义是：白底表示未作答，蓝底表示已作答，橙底表示当前正在作答。</p>
+                    <p class="er">（三）试题区域</p>
+                    <p>1、选择某一部分作答</p>
+                    <p>考生进入作答界面后，在试题区选择某一部分双击，或者单击左侧试题卡某一部分下的题号，即进入该部分作答界面。</p>
+                    <p>2、试题作答</p>
+                    <p>答题时，考生直接用鼠标点击备选项中认为正确的选项前面的按钮即可。如需要修改答案，用鼠标点击其他备选项前面的按钮，原先选择的选项将被自动替换。</p>
+                    <p>3、切换作答部分</p>
+                    <p>作答过程中如果需要切换到其他部分的题目，直接用鼠标点击该部分下的题号即可。</p>
+                    <p class="red">4、特别提醒</p>
+                    <p class="red">(1) 每部分都限时作答，系统在答题区域右上角显示该部分的作答剩余时间，作答剩余时间为零时，考生不能继续作答该部分的试题。请考生合理安排作答时间和作答次序。</p>
+                    <p class="red">(2)考生作答过程中一旦切换到其他部分进行作答，不可回退至之前已经作答的部分进行作答，请谨慎选择是否进行切换。</p>
+                    <p class="red">(3)考生提前结束某部分作答，该部分剩余的答题时间不累积到其他部分。</p>
+                    <p>(4)每部分考试时间剩余五分钟时系统自动弹窗提醒。</p>
+                    <!--  -->
+                    <p class="er">（四）切换试题</p>
+                    <p>系统为考生提供了多种切换试题的方式。</p>
+                    <p>1、点击答题卡中的题号，系统展现当前题号的试题；</p>
+                    <p>2、点”上一题“、”下一题“按钮，或使用F4/F5快捷键换题；</p>
+                    <p>3、设置为自动切换模式，在答题完成后自动跳转到下一题。<br>
+                        自动切换设置如下图所示：</p>
+                    <img src="images/5.png">
+                    <p class="er">（五）试卷缩放</p>
+                    <p>系统提供缩放试卷比例大小的功能，考生可以根据需求选择缩放比例。试卷缩放设置方式和自动切换设置类似。</p>
+                    <p class="er">（六）标记</p>
+                    <p>系统提供标记功能供考生对试题进行标记，在选项卡上，被标记的试题右上角有个三角形的标识。考生若合理使用此功能，可以在大量的试题中快速定位到需要重点检查的试题。</p>
+                    <p class="er">（七）离线</p>
+                    <p>当答题区域左下角出现如下提示：</p>
+                    <img style="margin:0;" src="images/9.png" alt="">
+                    <p>则请考生立即联系监考人员处理。</p>
+                    <h6>四、交卷</h6>
+                    <p class="er">（一）自动交卷</p>
+                    <p>考生用完全部考试时间，系统会自动交卷。考生不得提前交卷。</p>
+                    <p class="er">（三）交卷结果</p>
+                    <p>如果交卷成功，界面提示如下：</p>
+                    <img src="images/7.png">
+                    <p>如果“交卷失败”，系统提示如下，可以进行重试交卷或者联系监考老师进行单机收卷处理。</p>
+                    <img src="images/8.png">
+                    <h6>五、异常处理</h6>
+                    <p>如果考生在考试过程中出现无法登录、无法进入作答、程序无反应、程序意外退出、连接中断、电脑死机、屏幕无法正确显示、键盘鼠标无法操作、交卷失败等可能会影响作答的状况时，请立即联系监考人员处理。监考人员将会根据不同的情况采取最合适的处理措施。</p>
+                </div>
+                <!-- 指南 -->
+
+            </div>
+            <input type="button" value="我已阅读" class="action" id="action">
+        </div>
+    </div>
+
+<script type="text/javascript">
+    var second=10;//秒
+    var minute=00;//分
+    var hour=00;//时
+    var barTime=10;//进度条时间
+    $(function(){
+       content();
+        $(".content div").eq($(".change .current").index()).show();
+        $(document).on("click",".change li",function(){
+            $(this).addClass('current').siblings().removeClass("current");
+            $(".content div").eq($(this).index()).show().siblings("div").hide();
+        });
+        $("#action").click(function(event) {
+           $("#mybtn,.jzed").show();
+             bar();
+             $(this).attr("disabled","disabled");
+             $("body").animate({"scrollTop":0},300);
+        });
+        $(window).resize(function() {
+          content();
+        });
+        function content(){
+         $(".content").css("height",$(window).height()-$(".top").outerHeight()-$("h3").outerHeight()-$(".change").outerHeight()-$(".action").outerHeight()-70);
+        }
+    });
+//屏蔽右键菜单
+document.oncontextmenu = function (event){
+    if(window.event){
+        event = window.event;
+    }try{
+        var the = event.srcElement;
+        if (!((the.tagName == "INPUT" && the.type.toLowerCase() == "text") || the.tagName == "TEXTAREA")){
+            return false;
+        }
+        return true;
+    }catch (e){
+        return false;
+    }
+}
+
+            function timer(){
+                $(".ok").show();
+                if(second<=0){
+                    if(minute<=0){
+                        if(hour<=0){
+                            $(".hour").text("0");
+                            window.location.href="main.html";
+                        }else{
+                            hour--;
+                            minute=59;
+                            second=59;
+                            $("#mybtn").val("倒计时："+hour+":"+minute+":"+second);
+                            setTimeout(timer,1000);
+                        }
+                    }else{
+                        minute--;
+                        second=59;
+                        if(minute<10){
+                            minute="0"+minute;
+                        }
+                        $("#mybtn").val("倒计时："+hour+":"+minute+":"+second);
+                        setTimeout(timer,1000);
+                    }
+                }else{
+                    second--;
+                    if(second<10){
+                        second="0"+second;
+                    }
+                    $("#mybtn").val("倒计时："+hour+":"+minute+":"+second);
+                    setTimeout(timer,1000);
+                }
+            }
+            var len=0;
+           function bar(){
+                $(".bar").show();
+                len++;
+                if(len>=100){
+                    len=100;
+                    timer();
+                }else{
+                     setTimeout(bar,barTime);
+                }
+                $(".num").text(len+"%");
+                $(".bar p").css('width', len+'%');
+           }
+</script>
+</body></html>

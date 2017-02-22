@@ -1,0 +1,361 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#main {
+    font-family: 'Microsoft YaHei';
+    height: 100%;
+}
+
+header {
+    height: 86px;
+    background-color: #0241af;;
+}
+
+.person {
+    margin-left: 58px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 20px;
+    float: left;
+}
+
+.person a{
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    text-decoration: none;
+}
+
+.head-title{
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    float: left;
+    margin-left: 142px;
+    line-height: 32px;
+    margin-top: 8px;
+}
+
+.problem {
+    margin-left: 250px;
+    // float: left;
+    padding: 20px;
+}
+
+nav {
+    width: 250px;
+    float: left;
+    margin-left: -100%;
+    border-right: 1px solid #29B3E8;
+    overflow-y: scroll;
+}
+
+article {
+    float: left;
+    width: 100%;
+}
+
+.subject {
+    border-top: 1px solid #e4e4e4;
+    color: #272727;
+    line-height: 40px;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.problem ul {
+    padding-left: 80px;
+    display: none;
+}
+
+.problem ul li {
+    margin-right: 25px;
+    overflow: hidden;
+    position: relative;
+    list-style: none;
+}
+
+.problem ul li input {
+    float: left;
+    line-height: 40px;
+    margin-top: 14px;
+    position: absolute;
+    left: 0;
+    // margin-left: 200px;
+}
+
+.problem label {
+    padding-left: 25px;
+    float: left;
+    overflow: hidden;
+    cursor: pointer;
+    // margin-left: 200px;
+}
+
+.problem .problem-content label {
+    width: 40px;
+    height: 40px;
+    background-color: #a7caf0;
+    text-align: center;
+    padding: 0;
+    float: none;
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+}
+
+.problem-content p {
+    line-height: 40px;
+    padding-left: 70px;
+}
+
+.no {
+	// float: left;
+    display: inline-block;
+	// padding: 8px 12px 8px 12px;
+	width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    // flex: 2;
+	border: 1px solid #1d7ecc;
+    margin: 5px 5px 10px;
+    cursor: pointer;
+    // flex: 1;
+    // flex-basis: 40px;
+}
+
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.pro-block:first-child .block-title {
+    margin-top: 20px;
+}
+
+.block-title {
+
+    padding-left: 25px;
+
+}
+
+.block-title p{
+    font-size: 16px;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    line-height: 28px;
+    overflow: hidden;
+    cursor: pointer;
+    background-image: url('../images/jian.png');
+    color: #1d7ecc;;
+    background-position: left 13px;
+}
+
+.pro-wrapper {
+    width: 220px;
+    margin: 20px auto 0;
+    // align-content: flex-start;
+    // justify-content: space-between;
+}
+
+.pro-wrapper .pro-focus {
+    background: #f97217;
+    color: #ffffff;
+    border-color: #f97217;
+}
+
+.pro-wrapper .pro-done {
+    background: #1d7ecc;
+    color: #ffffff;
+}
+
+.pro-wrapper .pro-right {
+    background: green;
+    color: #ffffff;
+    border-color: green;
+}
+
+.pro-wrapper .pro-wrong {
+    background: red;
+    color: #ffffff;
+    border-color: red;
+}
+
+.compute {
+    font-size: 20px;
+    color: #fff;
+    float: left;
+    margin-left: 22px;
+    line-height: 26px;
+    margin-top: 10px;
+}
+
+.timer {
+    font-size: 20px;
+    color: #fff;
+    float: right;
+    margin-right: 15px;
+    line-height: 82px;
+}
+
+.sub {
+    border: none;
+    width: 137px;
+    height: 46px;
+    background: url(../images/btn.png) no-repeat;
+    _background: url(../images/btn.png) no-repeat;
+    font-size: 20px;
+    color: #fff;
+    float: right;
+    margin-right: 40px;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+.block-title.set-done p{
+    color: #b5b5b5;
+}
+
+.option {
+    height: 200px;
+    // position: absolute;
+    // bottom: 0;
+}
+
+.option span {
+    margin-right: 30px;
+    float: right;
+}
+
+.btn {
+    border-top: 1px solid #e4e4e4;
+    padding-top: 15px;
+    padding-right: 40px;
+    height: 110px;
+    zoom: 1;
+    position: relative;
+}
+
+.btn input {
+    background-image: url(../images/btn.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    float: right;
+    font-family: "Microsoft YaHei";
+}
+
+.btn .next {
+    width: 137px;
+}
+
+.up, .next {
+    width: 137px;
+    height: 47px;
+    color: #1d7ecc;
+    background-position: 0 -125px;
+    background-color: #fff;
+}
+
+.key {
+    width: 97px;
+    height: 33px;
+    color: #f97217;
+    background-position: 0 -244px;
+    background-color: #fff;
+    padding-left: 26px;
+    margin-top: 5px;
+}
+
+.no.addkey {
+    background-image: url(../images/btn.png);
+    background-position: 15px -631px;
+    background-repeat: no-repeat;
+}
+
+.partTime {
+    position: absolute;
+    right: 0;
+    margin-bottom: 3px;
+    width: 180px;
+    padding-left: 15px;
+    height: 22px;
+    line-height: 22px;
+    margin-right: 40px;
+    font-size: 15px;
+    background: url(../images/kuangkuang.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.tipTit {
+    font-size: 40px;
+    color: #f97217;
+    font-weight: bold;
+    text-align: center;
+    margin: 100px auto 0;
+}
+
+table {
+    width: 500px;
+    margin: 50px auto;
+}
+
+.change_part {
+    // cursor: pointer;
+}
+
+.change_part td {
+    text-align: center;
+}
+
+tr {
+    line-height: 27px;
+}
+
+td a, td {
+    color: #000000;
+    background: #fdf8f8;
+    // cursor: default;
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+th span {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    display: block;
+    background: #3f9fec;
+    padding: 4px 0;
+}
+
+.result {
+    overflow-y: scroll;
+}
+
+.lookResult {
+    width: 100px;
+    height: 40px;
+    background-color: orange;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    font-family: "Microsoft YaHei";
+    cursor: pointer;
+}

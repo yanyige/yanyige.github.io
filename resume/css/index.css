@@ -1,0 +1,388 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+	// overflow: hidden;
+}
+
+.menu-icon {
+	width: 38px;
+	position: absolute;
+	top:50%;
+	left: 25%;
+	transform: translate(-50%,-50%);
+	z-index: 8;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.menu-icon span {
+    height: 3px;
+    background-color: black;
+    display: block;
+}
+
+.half {
+	width: 50%;
+	float: left;
+}
+
+.title {
+	height: 100%;
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	background-color: white;
+}
+
+.title-left {
+	height: 100%;
+}
+
+.title-right {
+	// background-color: black;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.title-right-img {
+
+}
+
+.icon-arr-down {
+    display: inline-block;
+    width: 35px;
+    height: 23px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -12px 0 0 -17px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-color: transparent;
+    background-image: url(../images/icon-arr-down.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 999;
+    transition: 1s;
+    opacity: 1;
+}
+
+.menu-item-right-name {
+	height: 40px;
+	width: 100px;
+    color: black;
+    background-color: #eaeaea;
+    display: block;
+    border-radius: 5px;
+    line-height: 40px;
+    text-decoration: none;
+    font-family: Helvetica, 'Raleway', Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 微软雅黑, STHeiti, 华文细黑, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.menu-item-right-name-animated {
+	opacity: 1;
+	transition: 1s;
+}
+
+.title-left:hover {
+	// display: none;
+}
+
+.menu-wrap {
+	font-family: Helvetica, 'Raleway', Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 微软雅黑, STHeiti, 华文细黑, sans-serif;
+	height: 100%;
+	position: relative;
+}
+
+.menu-bar:hover {
+	cursor: pointer;
+}
+
+.menu-bar {
+	height: 70%;
+	position: relative;
+	opacity: 0;
+}
+
+.menu-bar-animated {
+	opacity: 1;
+	transition: 1s;
+}
+
+.menu-attach {
+	height: 15%;
+}
+
+.bottom-name {
+	font-size: 15px;
+	position: absolute;
+	// transition: 1s;
+	bottom: -100%;
+	color: #999;
+	text-align: center;
+	opacity: 0;
+}
+
+.bottom-name-animated {
+	opacity: 1;
+	width: 100%;
+	// transform: translate('-50%');
+	bottom: 6%;
+	transition: 1s;
+}
+
+.title-name {
+	text-align: center;
+	font-size: 25px;
+	position: absolute;
+	// transition: 1s;
+	top: -100px;
+}
+
+.title-name-animated {
+	opacity: 1;
+	width: 100%;
+	// transform: translate('-50%');
+	top: 6%;
+	transition: 1s;
+}
+
+.menu-item {
+	height: 14.28%;
+	position: relative;
+	border-top: 1px solid #f0f0f0;;
+}
+
+.menu-item>a {
+	text-decoration: none;
+	color: black;
+}
+
+.menu-item:hover {
+	background-color: #fafafa;
+	color: #777;
+}
+
+.menu-item:last-child {
+	border-bottom: 1px solid #f0f0f0;;
+}
+
+.menu-item-name {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+}
+
+.menu-item-name-animated {
+	opacity: 1;
+}
+
+.bar-left {
+	position: fixed;
+	width: 17%;
+	height: 100%;
+	background-color: white;
+	// opacity: 0;
+}
+
+.bar-left-animated {
+	// transition: 0.5s;
+	opacity: 1;
+}
+
+.body {
+	height: 100%;
+	position: relative;
+	top: 100%;
+	z-index: 0;
+}
+
+.articles {
+	height: 100%;
+}
+
+.article-main {
+	height: 100%;
+}
+
+#aboutMe {
+	background-color: rgb(254, 67, 101);
+}
+
+#education {
+	background-color: rgb(252, 157, 154);
+}
+
+#awards {
+	background-color: rgb(249, 205, 173);
+}
+
+#projects {
+	background-color: rgb(200, 200, 169);
+}
+
+#skills {
+	background-color: rgb(131, 175, 155);
+}
+
+#evaluate {
+	background-color: rgb(69, 137, 148);
+}
+
+#contact {
+	background-color: rgb(20, 68, 106);
+}
+
+.body-item-name {
+	color: black;
+	list-style: none;
+	text-decoration: none;
+}
+
+
+.bar-left header {
+	text-align: center;
+}
+
+.bar-left header>img{
+	height: 200px;
+	width: 100%;
+	// background-image: url('../images/xiaohui.jpg');
+	// background-size: cover;
+}
+
+.bar-left li {
+	font-weight: lighter;
+	font-size: 16px;
+	font-family: Helvetica, 'Raleway', Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 微软雅黑, STHeiti, 华文细黑, sans-serif;
+}
+
+.bar-left li:hover {
+
+}
+
+.bar-left li a {
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	transition: 1s;
+}
+
+.bar-left li a.active {
+	position: relative;
+    color: #777;
+    cursor: default;
+    transition: 1s;
+}
+
+.bar-left li:hover {
+	cursor: pointer;
+}
+
+.bar-left li:nth-child(1) {
+	background-color: #A93536 !important;
+}
+.bar-left li:nth-child(2) {
+	background-color: rgb(254, 67, 101);
+}
+.bar-left li:nth-child(3) {
+	background-color: rgb(252, 157, 154);
+}
+.bar-left li:nth-child(4) {
+	background-color: rgb(249, 205, 173);
+}
+.bar-left li:nth-child(5) {
+	background-color: rgb(200, 200, 169);
+}
+.bar-left li:nth-child(6) {
+	background-color: rgb(131, 175, 155);
+}
+.bar-left li:nth-child(7) {
+	background-color: rgb(69, 137, 148);
+}
+.bar-left li:nth-child(8) {
+	background-color: rgb(20, 68, 106);
+}
+
+.article-main {
+	padding-left: 17%;
+	font-family: Helvetica, Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 微软雅黑, STHeiti, 华文细黑, sans-serif;
+}
+
+.articles {
+    padding: 4% 6.5%;
+}
+
+
+
+.article-title {
+
+    font-size: 36px;
+    font-weight: 300;
+    margin: 20px 0 60px;
+}
+
+.article-item li {
+	margin: 20px 0;
+	list-style: none;
+	font-size: 18px;
+}
+
+.article-item-prev {
+	font-style: italic;
+	width: 180px;
+	display: inline-block;
+}
+
+.article-wrapper {
+	max-height: 80%;
+	overflow: auto;
+}
+
+#skills .article-item li {
+	font-size: 26px;
+	font-weight: lighter;
+}
+
+#evaluate .article-item li {
+	font-size: 26px;
+	font-weight: lighter;
+}
+
+.logo img {
+	height: 200px;
+	left: 0;
+	right: 0;
+	width: 200px;
+	top: 20%;
+	margin: 0 auto;
+	position: absolute;
+	z-index: 3;
+}
+
+.title-right-wrapper {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .8);
+	position: absolute;
+	top: 0;
+}
+
+.xiaohui {
+	cursor: pointer;
+}

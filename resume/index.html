@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人简历</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+	<script src="react.js"></script>
+    <script src="react-dom.js"></script>
+    <script src="babel.min.js"></script>
+    <script src="js/index.js"></script>
+	<script src="js/jquery.mCustomScrollbar.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
+    <link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+	<section class="title" data-target="title">
+		<div class="logo">
+			<img src="images/timg.jpg" alt="">
+		</div>
+		<div class="half title-left">
+			<div class="menu-icon">
+				<span style=""></span>
+				<span style="margin: 6px 0;"></span>
+				<span style=""></span>
+			</div>
+			<div class="menu-wrap">
+				<header class="menu-attach"><p class="title-name">YANYIGE</p></header>
+				<div class="menu-bar">
+					<div class="menu-item"><a href="javascript:void(0)" data-target="aboutMe" class="menu-item-name">关于我</a></div>
+					<div class="menu-item"><a href="javascript:void(0)" data-target="education" class="menu-item-name">教育背景</a></div>
+					<div class="menu-item"><a href="javascript:void(0)" data-target="awards" class="menu-item-name">获奖经历</a></div>
+					<div class="menu-item"><a href="javascript:void(0)" data-target="projects" class="menu-item-name">项目经历</a></div>
+					<div class="menu-item"><a href="javascript:void(0)" data-target="skills" class="menu-item-name">能力特长</a></div>
+					<div class="menu-item"><a href="javascript:void(0)" data-target="evaluate" class="menu-item-name">个人评价</a></div>
+					<div class="menu-item"><a href="javascript:void(0)" data-target="contact" class="menu-item-name">联系方式</a></div>
+				</div>
+				<footer class="menu-attach bottom">
+					<a class="bottom-name">github地址</a>
+				</footer>
+			</div>
+		</div>
+		<div class="half title-right">
+			<b class="icon-arr-down"></b>
+			<div class="title-right-img">
+				<img src="images/timg.jpg">
+			</div>
+			<div class="title-right-wrapper">
+
+			</div>
+			<a href="javascript:void(0)" data-target="aboutMe" data-target="aboutMe" class="menu-item-right-name">关于我</a>
+		</div>
+	</section>
+	<!-- section. -->
+	<section class="body">
+		<aside class="bar-left">
+			<header>
+				<img class="xiaohui" src="images/xiaohui.jpg">
+			</header>
+			<ul>
+				<li><a href="javascript:void(0)" data-target="home" class="body-item-name">HOME</a></li>
+				<li><a href="javascript:void(0)" data-target="aboutMe" class="body-item-name">关于我</a></li>
+				<li><a href="javascript:void(0)" data-target="education" class="body-item-name">教育背景</a></li>
+				<li><a href="javascript:void(0)" data-target="awards" class="body-item-name">获奖经历</a></li>
+				<li><a href="javascript:void(0)" data-target="projects" class="body-item-name">项目经历</a></li>
+				<li><a href="javascript:void(0)" data-target="skills" class="body-item-name">能力特长</a></li>
+				<li><a href="javascript:void(0)" data-target="evaluate" class="body-item-name">个人评价</a></li>
+				<li><a href="javascript:void(0)" data-target="contact" class="body-item-name">联系方式</a></li>
+			</ul>
+		</aside>
+		<article class="article-main">
+			<section id="aboutMe" class="articles">
+					<p class="article-title">关于我</p>
+					<ul class="article-item">
+						<li><span class="article-item-prev">名字 : </span>严一格 (yanyige)</li>
+						<li><span class="article-item-prev">出生日期 : </span>1993.11</li>
+						<li><span class="article-item-prev">性别 : </span>男</li>
+						<li><span class="article-item-prev">邮箱 : </span>232218719@qq.com; yanyg270@nenu.edu.cn</li>
+						<li><span class="article-item-prev">学历 : </span>东北师范大学 - 本科 - 计算机科学与技术专业</li>
+						<li><span class="article-item-prev">工作 : </span>学生，期望一份2018届实习生工作</li>
+						<li><span class="article-item-prev">github : </span>https://github.com/yanyige</li>
+					</ul>
+			</section>
+			<section id="education" class="articles">
+					<p class="article-title">教育背景</p>
+					<ul class="article-item">
+						<li><span class="article-item-prev">2011.9~2015.6</span>本科  东北师范大学  计算机科学与技术专业</li>
+						<li><span class="article-item-prev">2015.9~目前</span>硕士  东北师范大学  计算机应用技术 智能信息处理</li>
+					</ul>
+			</section>
+			<section id="awards" class="articles">
+					<div class="article-wrapper">
+						<p class="article-title">获奖经历</p>
+						<ul class="article-item">
+							<li><span class="article-item-prev">2012.4</span>ACM-ICPC 亚洲区 长春站邀请赛(铜牌)</li>
+							<li><span class="article-item-prev">2012.4</span>ACM-ICPC 吉林省赛(二等奖)</li>
+							<li><span class="article-item-prev">2012.4</span>ACM 东北师范大学校赛(二等奖)</li>
+							<li><span class="article-item-prev">2012.11</span>东北师范大学学有专长奖学金</li>
+							<li><span class="article-item-prev">2013.4</span>ACM 东北师范大学校赛(二等奖)</li>
+							<li><span class="article-item-prev">2013.6 </span>吉林省大学生数学建模竞赛(二等奖)</li>
+							<li><span class="article-item-prev">2013.10</span>ACM-ICPC 亚洲区 杭州站(优胜奖)</li>
+							<li><span class="article-item-prev">2013.11</span>东北师范大学三等奖学金</li>
+							<li><span class="article-item-prev">2013.11</span>东北师范大学社会实践奖学金</li>
+							<li><span class="article-item-prev">2014.6 </span>国家大学生创新创业项目"基于Android的无线网络客户端的开发"优秀结项</li>
+							<li><span class="article-item-prev">2014.6 </span>东师专项"基于Android的师生信息反馈平台设计"成功结项</li>
+							<li><span class="article-item-prev">2015.6 </span>吉林省大学生数学建模竞赛(一等奖)</li>
+							<li><span class="article-item-prev">2016.6 </span>"森祥·华为"杯长春市青年信息化精英创新创意设计大赛(冠军)</li>
+							<li><span class="article-item-prev">2016.12 </span>全国中关村人才创客大赛全国优秀奖</li>
+						</ul>
+					</div>
+			</section>
+			<section id="projects" class="articles">
+					<p class="article-title">项目经历</p>
+					<ul class="article-item">
+						<li><span class="article-item-prev">2014.6-2015.6</span>东北师范大学计算机科学与信息技术学院网站改版</li>
+						<li><span class="article-item-prev">2015.5-2015.9</span>东北师范大学妇女委员会网站制作</li>
+						<li><span class="article-item-prev">2015.7-2015.7</span>东北师范大学远程教育学院网站制作</li>
+						<li><span class="article-item-prev">2015.9-2016.6</span>东北师范大学教务处担任助管一职(使用VFP和Access数据库整理制作东北师范大学教学运行报告)</li>
+						<li><span class="article-item-prev">2016.5-2016.6</span>制作课堂小项目"快乐运算"</li>
+						<li><span class="article-item-prev">2016.3-2016.6</span>制作东北师范大学留日预校网站</li>
+						<li><span class="article-item-prev">2016.7-2016.9</span>极道科技（北京）有限公司实习，独立完成首页制作</li>
+						<li><span class="article-item-prev">2016.9-2016.10</span>制作吉林省时代教育公务员考试系统</li>
+					</ul>
+			</section>
+			<section id="skills" class="articles">
+					<p class="article-title">能力特长</p>
+					<ul class="article-item" style="font-size: 20px">
+						<li>了解数据结构、算法等相关知识, 并且善于运用于实践</li>
+						<li>擅长Html/Css/Javascript, C/C++, 了解Java, NodeJs, React等语言应用</li>
+						<li>具有团队管理经验, 擅长多人合作, 担任东北师范大学创意工作室负责人</li>
+						<li>具有服务器管理经验, 能够独立设计数据库, 有一定的全栈能力</li>
+						<li>会使用GIT进行代码管理和版本控制</li>
+						<li>具有一定的项目经验和代码量, 遇到问题可以迅速定位问题, 并进行独立思考后解决</li>
+					</ul>
+			</section>
+			<section id="evaluate" class="articles">
+					<p class="article-title">个人评价</p>
+					<ul class="article-item">
+						<li>热爱编程, 在校期间努力学习, 积极参加各类比赛和活动</li>
+						<li>学习之余自学WEB开发、前端开发, 团结同学完成各类项目, 具有很强的学习能力和团队合作能力</li>
+						<li>遇到问题沉着冷静, 可以独立思考, 动手能力强, 能独立完成项目</li>
+						<li>使用印象笔记和有道云笔记进行记录, 经常进行反思和总结</li>
+						<li>喜欢乒乓球、轻音乐、电影、电子游戏, 在生活中容易相处</li>
+						<li>思维灵活、涉猎广泛</li>
+					</ul>
+			</section>
+			<section id="contact" class="articles">
+					<p class="article-title">联系方式</p>
+					<ul class="article-item">
+						<li><span class="article-item-prev">Email:</span>232218719@qq.com; yanyg270@nenu.edu.cn</li>
+						<li><span class="article-item-prev">Phone:</span>18243000589</li>
+						<li><span class="article-item-prev">QQ : </span>232218719</li>
+						<li><span class="article-item-prev">GitHub : </span>https://github.com/yanyige</li>
+					</ul>
+			</section>
+		</article>
+	</section>
+</body>
+<script type="text/javascript">
+	$(".article-wrapper").mCustomScrollbar({
+		theme:"minimal"
+	});
+</script>
+</html>

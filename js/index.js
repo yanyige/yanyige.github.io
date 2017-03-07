@@ -8,6 +8,7 @@ $(document).ready(() => {
 	var bottomName = document.getElementsByClassName('bottom-name')[0];
 	var menuBar = document.getElementsByClassName('menu-bar')[0];
 	var menuItemRightName = document.getElementsByClassName('menu-item-right-name')[0];
+	var menuItemRightBlog = document.getElementsByClassName('menu-item-right-blog')[0];
 
 	const parts = ['title', 'aboutMe', 'education', 'awards', 'projects', 'skills', 'evaluate', 'contact'];
 
@@ -30,11 +31,13 @@ $(document).ready(() => {
 	rightTitle.onmouseover = () => {
 		iconArr.style.opacity = '0';
 		menuItemRightName.className = 'menu-item-right-name menu-item-right-name-animated';
+		menuItemRightBlog.className = 'menu-item-right-blog menu-item-right-blog-animated';
 
 	}
 	rightTitle.onmouseout = () => {
 		iconArr.style.opacity = '1';
 		menuItemRightName.className = 'menu-item-right-name';
+		menuItemRightBlog.className = 'menu-item-right-blog';
 	}
 
 	$('.menu-item').add($('.bar-left').children(':first').next().children()).click(function() {

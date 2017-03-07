@@ -87,11 +87,33 @@ html, body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -100%);
+    opacity: 0;
+}
+
+.menu-item-right-blog {
+	height: 40px;
+	width: 100px;
+    color: black;
+    background-color: #eaeaea;
+    display: block;
+    border-radius: 5px;
+    line-height: 40px;
+    text-decoration: none;
+    font-family: Helvetica, 'Raleway', Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 微软雅黑, STHeiti, 华文细黑, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
     opacity: 0;
 }
 
 .menu-item-right-name-animated {
+	opacity: 1;
+	transition: 1s;
+}
+
+.menu-item-right-blog-animated {
 	opacity: 1;
 	transition: 1s;
 }

@@ -10,7 +10,7 @@ $(document).ready(() => {
 	var menuItemRightName = document.getElementsByClassName('menu-item-right-name')[0];
 	var menuItemRightBlog = document.getElementsByClassName('menu-item-right-blog')[0];
 
-	const parts = ['title', 'aboutMe', 'education', 'awards', 'projects', 'skills', 'evaluate', 'contact'];
+	const parts = ['title', 'aboutMe', 'education', 'awards', 'projects', 'skills', 'evaluate', 'contact', 'gallary'];
 
 	leftTitle.onmouseover = () => {
 		var menuIconCss = document.defaultView.getComputedStyle(menuIcon, null);
@@ -58,6 +58,7 @@ $(document).ready(() => {
 	})
 
 	jQuery.scrollTo = (target, time) => {
+		console.log(target);
 		if(target == 'home') {
 			$('html, body').stop().animate({
 				scrollTop: 0
@@ -95,7 +96,9 @@ $(document).ready(() => {
 	            }
 	            if (e.wheelDelta < 0) { //当滑轮向下滚动时
 	                // alert("滑轮向下滚动");
-	                if($.getCurrentPart() < 7)
+	            	console.log($.getCurrentPart());
+	            	console.log(parts[$.getCurrentPart() + 1]);
+	                if($.getCurrentPart() < 9)
 	                $.scrollTo($('#'+parts[$.getCurrentPart() + 1]), 1000);
 	            }
 	        } else if (e.detail) {  //Firefox滑轮事件
@@ -109,7 +112,7 @@ $(document).ready(() => {
 	            }
 	            if (e.detail< 0) { //当滑轮向下滚动时
 	                // alert("滑轮向下滚动");
-	                if($.getCurrentPart() < 7)
+	                if($.getCurrentPart() < 9)
 	                $.scrollTo($('#'+parts[$.getCurrentPart() + 1]), 1000);
 	            }
 	        }

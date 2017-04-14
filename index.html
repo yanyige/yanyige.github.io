@@ -10,9 +10,25 @@
     <script src="js/index.js"></script>
 	<script src="js/jquery.mCustomScrollbar.js"></script>
 	<script src="js/jquery.mousewheel.min.js"></script>
+	<script src="js/swiper.min.js"></script>
     <link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/index.css">
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
+
+    <style type="text/css">
+    	.swiper-container {
+	        width: 100%;
+	        padding-top: 50px;
+	        padding-bottom: 50px;
+	    }
+	    .swiper-slide {
+	        background-position: center;
+	        background-size: cover;
+	        width: 300px;
+	        height: 300px;
+	    }
+    </style>
 </head>
 <body>
 	<section class="title" data-target="title">
@@ -35,6 +51,7 @@
 					<div class="menu-item"><a href="javascript:void(0)" data-target="skills" class="menu-item-name">能力特长</a></div>
 					<div class="menu-item"><a href="javascript:void(0)" data-target="evaluate" class="menu-item-name">个人评价</a></div>
 					<div class="menu-item"><a href="javascript:void(0)" data-target="contact" class="menu-item-name">联系方式</a></div>
+					<div class="menu-item"><a href="javascript:void(0)" data-target="gallary" class="menu-item-name">陈列室</a></div>
 				</div>
 				<footer class="menu-attach bottom">
 					<a class="bottom-name" href="https://github.com/yanyige">github地址</a>
@@ -68,6 +85,7 @@
 				<li><a href="javascript:void(0)" data-target="skills" class="body-item-name">能力特长</a></li>
 				<li><a href="javascript:void(0)" data-target="evaluate" class="body-item-name">个人评价</a></li>
 				<li><a href="javascript:void(0)" data-target="contact" class="body-item-name">联系方式</a></li>
+				<li><a href="javascript:void(0)" data-target="gallary" class="body-item-name">陈列室</a></li>
 			</ul>
 		</aside>
 		<article class="article-main">
@@ -158,12 +176,46 @@
 						<li><span class="article-item-prev">GitHub : </span>https://github.com/yanyige</li>
 					</ul>
 			</section>
+			<section id="gallary" class="articles">
+				<p class="article-title">陈列室</p>
+				<div class="swiper-container">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide" style="background-image:url('images/gallary/ACM-ICPC亚洲区杭州赛区(优胜奖).JPG')"></div>
+			            <div class="swiper-slide" style="background-image:url('images/gallary/ACM-ICPC亚洲区长春赛区邀请赛铜奖.JPG')"></div>
+			            <div class="swiper-slide" style="background-image:url('images/gallary/东北师大科研专项结项证书.JPG')"></div>
+			            <div class="swiper-slide" style="background-image:url('images/gallary/国家大学生创新创业训练计划结项证书.JPG')"></div>
+			            <div class="swiper-slide" style="background-image:url('images/gallary/国家大学生新创业训练计划项目立项通知书.JPG')"></div>
+			            <div class="swiper-slide" style="background-image:url('images/gallary/吉林省数学建模二等奖.JPG')"></div>
+			            <div class="swiper-slide" style="background-image:url('images/gallary/全国数学建模二等奖.JPG')"></div>
+			            <div class="swiper-slide" style="background-image:url('images/gallary/学有专长奖学金.JPG')"></div>
+			            <div class="swiper-slide" style="background-image:url('images/gallary/正元杯程序设计省二等奖.JPG')"></div>
+			            <div class="swiper-slide" style="background-image:url('images/gallary/社会实践奖学金.JPG')"></div>
+			        </div>
+			        <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+			    </div>
+			</section>
 		</article>
 	</section>
 </body>
+
 <script type="text/javascript">
 	$(".article-wrapper").mCustomScrollbar({
 		theme:"minimal"
 	});
+	var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
 </script>
 </html>

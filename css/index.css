@@ -182,7 +182,7 @@ html, body {
 }
 
 .menu-item {
-	height: 14.28%;
+	height: 12.5%;
 	position: relative;
 	border-top: 1px solid #f0f0f0;;
 }
@@ -218,6 +218,7 @@ html, body {
 	width: 17%;
 	height: 100%;
 	background-color: white;
+	top: 0;
 	// opacity: 0;
 }
 
@@ -267,6 +268,10 @@ html, body {
 
 #contact {
 	background-color: rgb(20, 68, 106);
+}
+
+#gallary {
+	background-color: #373E40;
 }
 
 .body-item-name {
@@ -340,6 +345,9 @@ html, body {
 .bar-left li:nth-child(8) {
 	background-color: rgb(20, 68, 106);
 }
+.bar-left li:nth-child(9) {
+	background-color: #373E40;
+}
 
 .article-main {
 	padding-left: 17%;
@@ -348,6 +356,7 @@ html, body {
 
 .articles {
     padding: 4% 6.5%;
+    box-sizing: border-box;
 }
 
 
